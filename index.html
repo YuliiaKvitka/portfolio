@@ -12,6 +12,7 @@
 <meta property="og:title" content="Юлія — SEO та digital-маркетинг">
 <meta property="og:description" content="Технічне SEO, контент і платна реклама для брендів в Україні та Європі.">
 <meta property="og:url" content="https://portfolio-neon-alpha-54.vercel.app/">
+<meta property="og:image" content="https://portfolio-neon-alpha-54.vercel.app/yuliia-photo.jpg">
 <meta property="og:locale" content="uk_UA">
 <meta property="og:locale:alternate" content="en_US">
 <meta name="twitter:card" content="summary">
@@ -29,6 +30,7 @@
   "name": "Yuliia",
   "jobTitle": "SEO & Digital Marketing Specialist",
   "url": "https://portfolio-neon-alpha-54.vercel.app",
+  "image": "https://portfolio-neon-alpha-54.vercel.app/yuliia-photo.jpg",
   "knowsLanguage": ["uk", "en", "cs", "pl"],
   "areaServed": ["Ukraine", "Czech Republic", "Europe"],
   "makesOffer": [
@@ -222,15 +224,13 @@
   }
 
   /* About */
-  .about-grid{ display:grid; grid-template-columns:200px 1fr; gap:36px; align-items:start; }
+  .about-grid{ display:grid; grid-template-columns:240px 1fr; gap:36px; align-items:start; }
   .about-card{
-    border:1px solid var(--line); border-radius:10px; background:#fff; padding:24px;
+    border:1px solid var(--line); border-radius:10px; background:#fff; padding:14px;
     text-align:center;
   }
-  .avatar{
-    width:72px; height:72px; border-radius:50%; background:var(--chip); border:1px solid var(--line);
-    display:flex; align-items:center; justify-content:center; margin:0 auto 14px;
-    font-family:var(--font-mono); font-weight:600; font-size:20px; color:var(--link);
+  .about-photo{
+    width:100%; height:auto; border-radius:7px; display:block; margin:0 0 14px; object-fit:cover;
   }
   .about-name{ font-family:var(--font-display); font-weight:600; font-size:16px; margin:0 0 4px; }
   .about-role{ font-size:13px; color:var(--ink-soft); margin:0; }
@@ -317,7 +317,10 @@
   <section class="wrap reveal" id="about">
     <div class="about-grid">
       <div class="about-card">
-        <div class="avatar">ЮК</div>
+        <picture>
+          <source srcset="yuliia-photo.webp" type="image/webp">
+          <img class="about-photo" src="yuliia-photo.jpg" alt="Yuliia Kvitchasta" width="640" height="800" loading="lazy">
+        </picture>
         <p class="about-name">Yuliia Kvitchasta</p>
         <p class="about-role" data-i18n="uk">SEO та digital-маркетинг</p>
         <p class="about-role" data-i18n="en">SEO &amp; Digital Marketing</p>
