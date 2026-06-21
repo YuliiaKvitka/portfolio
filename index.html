@@ -37,7 +37,10 @@
     {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Paid Social Advertising"}},
     {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Analytics & Tracking Setup"}},
     {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Link Building"}},
-    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Multilingual Localization"}}
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Multilingual Localization"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Google Ads Campaigns"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "WordPress Website Development"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Competitive Analysis & Positioning"}}
   ]
 }
 </script>
@@ -142,6 +145,15 @@
   .service-card{
     border:1px solid var(--line); border-radius:10px; padding:22px; background:#fff;
   }
+  .service-icon{
+    width:34px; height:34px; color:var(--link); display:block; margin-bottom:16px;
+  }
+  @media (prefers-reduced-motion: no-preference){
+    .service-card{ transition:border-color .25s ease, transform .25s ease; }
+    .service-icon{ transition:transform .25s ease; }
+    .service-card:hover{ border-color:var(--link); transform:translateY(-2px); }
+    .service-card:hover .service-icon{ transform:scale(1.08); }
+  }
   .tag{
     display:inline-block; font-family:var(--font-mono); font-size:12px;
     background:var(--chip); padding:4px 9px; border-radius:4px; margin-bottom:14px;
@@ -229,8 +241,8 @@
     <p class="hero-sub" data-i18n="en">From technical audits and structured data to multilingual content and Meta Ads campaigns — working across Ukrainian and European markets.</p>
 
     <div class="cta-row">
-      <a class="btn btn-primary" href="#contact" data-i18n="uk">Написати</a>
-      <a class="btn btn-primary" href="#contact" data-i18n="en">Get in touch</a>
+      <a class="btn btn-primary" href="mailto:yuliiakvitchasta@gmail.com" data-i18n="uk">Написати</a>
+      <a class="btn btn-primary" href="mailto:yuliiakvitchasta@gmail.com" data-i18n="en">Get in touch</a>
       <a class="btn btn-secondary" href="#services" data-i18n="uk">Переглянути послуги</a>
       <a class="btn btn-secondary" href="#services" data-i18n="en">View services</a>
     </div>
@@ -244,6 +256,14 @@
 
     <div class="services-grid">
       <div class="service-card">
+        <svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="6" y="5" width="20" height="26" rx="2"/>
+          <line x1="10" y1="12" x2="22" y2="12"/>
+          <line x1="10" y1="17" x2="22" y2="17"/>
+          <line x1="10" y1="22" x2="17" y2="22"/>
+          <circle cx="27" cy="27" r="6"/>
+          <line x1="31.2" y1="31.2" x2="35.5" y2="35.5"/>
+        </svg>
         <span class="tag">TECH-SEO</span>
         <h3 data-i18n="uk">Технічний SEO-аудит</h3>
         <h3 data-i18n="en">Technical SEO Audits</h3>
@@ -252,6 +272,13 @@
       </div>
 
       <div class="service-card">
+        <svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="7" y="5" width="20" height="26" rx="2"/>
+          <line x1="11" y1="12" x2="23" y2="12"/>
+          <line x1="11" y1="17" x2="23" y2="17"/>
+          <line x1="11" y1="22" x2="19" y2="22"/>
+          <path d="M24 28 L34 18 L37 21 L27 31 L23 32 Z"/>
+        </svg>
         <span class="tag">CONTENT</span>
         <h3 data-i18n="uk">Контент-стратегія та копірайтинг</h3>
         <h3 data-i18n="en">Content Strategy &amp; Copywriting</h3>
@@ -260,6 +287,13 @@
       </div>
 
       <div class="service-card">
+        <svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="17" cy="21" r="13"/>
+          <circle cx="17" cy="21" r="7.5"/>
+          <circle cx="17" cy="21" r="2.2" fill="currentColor" stroke="none"/>
+          <line x1="25.5" y1="12.5" x2="35" y2="3"/>
+          <path d="M28.5 3 L35 3 L35 9.5"/>
+        </svg>
         <span class="tag">PAID-ADS</span>
         <h3 data-i18n="uk">Таргетована реклама</h3>
         <h3 data-i18n="en">Paid Social Campaigns</h3>
@@ -268,6 +302,13 @@
       </div>
 
       <div class="service-card">
+        <svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="6" y1="33" x2="34" y2="33"/>
+          <rect x="9" y="23" width="5" height="10"/>
+          <rect x="18" y="17" width="5" height="16"/>
+          <rect x="27" y="10" width="5" height="23"/>
+          <circle cx="29.5" cy="6.5" r="2" fill="currentColor" stroke="none"/>
+        </svg>
         <span class="tag">ANALYTICS</span>
         <h3 data-i18n="uk">Аналітика та трекінг</h3>
         <h3 data-i18n="en">Analytics &amp; Tracking</h3>
@@ -276,6 +317,10 @@
       </div>
 
       <div class="service-card">
+        <svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="4" y="14" width="17" height="10" rx="5" transform="rotate(-25 12.5 19)"/>
+          <rect x="19" y="16" width="17" height="10" rx="5" transform="rotate(-25 27.5 21)"/>
+        </svg>
         <span class="tag">LINKS</span>
         <h3 data-i18n="uk">Лінкбілдинг</h3>
         <h3 data-i18n="en">Link Building</h3>
@@ -284,11 +329,64 @@
       </div>
 
       <div class="service-card">
+        <svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="20" cy="20" r="14"/>
+          <ellipse cx="20" cy="20" rx="6" ry="14"/>
+          <line x1="6" y1="20" x2="34" y2="20"/>
+          <line x1="8.3" y1="13" x2="31.7" y2="13"/>
+          <line x1="8.3" y1="27" x2="31.7" y2="27"/>
+        </svg>
         <span class="tag">I18N</span>
         <h3 data-i18n="uk">Мультимовна локалізація</h3>
         <h3 data-i18n="en">Multilingual Localization</h3>
         <p data-i18n="uk">Адаптація контенту під кілька ринків: переклад, hreflang, мовні нюанси.</p>
         <p data-i18n="en">Adapting content for multiple markets: translation, hreflang, local nuance.</p>
+      </div>
+
+      <div class="service-card">
+        <svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="16" cy="16" r="10"/>
+          <line x1="23" y1="23" x2="27" y2="27"/>
+          <path d="M24 24 L36 28 L31 31 L28 36 Z" fill="currentColor" stroke="none"/>
+          <line x1="35" y1="20" x2="38" y2="18"/>
+          <line x1="37" y1="25" x2="39" y2="25"/>
+        </svg>
+        <span class="tag">GOOGLE-ADS</span>
+        <h3 data-i18n="uk">Реклама в Google Ads</h3>
+        <h3 data-i18n="en">Google Ads Campaigns</h3>
+        <p data-i18n="uk">Пошукові кампанії, ремаркетинг і оптимізація ставок — від налаштування до контролю результату.</p>
+        <p data-i18n="en">Search campaigns, remarketing, and bid optimization — from setup to ongoing management.</p>
+      </div>
+
+      <div class="service-card">
+        <svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="4" y="6" width="32" height="26" rx="3"/>
+          <line x1="4" y1="13" x2="36" y2="13"/>
+          <circle cx="9" cy="9.5" r="1" fill="currentColor" stroke="none"/>
+          <circle cx="13" cy="9.5" r="1" fill="currentColor" stroke="none"/>
+          <circle cx="17" cy="9.5" r="1" fill="currentColor" stroke="none"/>
+          <rect x="9" y="18" width="9" height="9" rx="1.5"/>
+          <line x1="22" y1="19" x2="31" y2="19"/>
+          <line x1="22" y1="23" x2="31" y2="23"/>
+          <line x1="22" y1="27" x2="27" y2="27"/>
+        </svg>
+        <span class="tag">WORDPRESS</span>
+        <h3 data-i18n="uk">Створення сайтів на WordPress</h3>
+        <h3 data-i18n="en">WordPress Website Development</h3>
+        <p data-i18n="uk">Розробка та налаштування сайтів — швидких, адаптивних і готових до SEO з першого дня.</p>
+        <p data-i18n="en">Building and configuring sites — fast, responsive, and SEO-ready from day one.</p>
+      </div>
+
+      <div class="service-card">
+        <svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="15" cy="20" r="11"/>
+          <circle cx="25" cy="20" r="11"/>
+        </svg>
+        <span class="tag">POSITIONING</span>
+        <h3 data-i18n="uk">Конкурентний аналіз і позиціонування</h3>
+        <h3 data-i18n="en">Competitive Analysis &amp; Positioning</h3>
+        <p data-i18n="uk">Аналіз конкурентів і формування унікального позиціонування бренду — наратив, що відрізняє вас на ринку.</p>
+        <p data-i18n="en">Competitor analysis and brand positioning — a narrative that sets you apart in a crowded market.</p>
       </div>
     </div>
   </section>
@@ -317,14 +415,32 @@
     <div class="terminal">
       <div class="terminal-bar"><span></span><span></span><span></span></div>
       <div class="terminal-body">
-        <div data-i18n="uk"><span class="check">✓</span> hreflang налаштовано для 4 мовних версій сайту → коректна індексація</div>
-        <div data-i18n="en"><span class="check">✓</span> hreflang configured across 4 locales → correct indexing</div>
-
         <div data-i18n="uk"><span class="check">✓</span> відновлено GA4-трекінг покупок, заблокований Safari ITP / Apple Pay</div>
         <div data-i18n="en"><span class="check">✓</span> GA4 purchase tracking restored after Safari ITP / Apple Pay blocked it</div>
 
-        <div data-i18n="uk"><span class="check">✓</span> розблоковано конверсії Google Ads, які гасив consent-менеджер<span class="cursor"></span></div>
-        <div data-i18n="en"><span class="check">✓</span> Google Ads conversions unblocked from a consent-manager conflict<span class="cursor"></span></div>
+        <div data-i18n="uk"><span class="check">✓</span> розблоковано конверсії Google Ads, які гасив consent-менеджер</div>
+        <div data-i18n="en"><span class="check">✓</span> Google Ads conversions unblocked from a consent-manager conflict</div>
+
+        <div data-i18n="uk"><span class="check">✓</span> виправлено мовні помилки (відмінки, граматичний рід, кальки) на 4 мовних версіях</div>
+        <div data-i18n="en"><span class="check">✓</span> corrected language errors (case forms, grammatical gender, calques) across 4 locales</div>
+
+        <div data-i18n="uk"><span class="check">✓</span> розміщено органічні беклінки на профільних донор-сайтах без спам-патернів</div>
+        <div data-i18n="en"><span class="check">✓</span> placed organic backlinks on relevant donor sites with no spam patterns</div>
+
+        <div data-i18n="uk"><span class="check">✓</span> сформовано унікальне позиціонування бренду проти європейських преміум-конкурентів</div>
+        <div data-i18n="en"><span class="check">✓</span> positioned the brand against premium EU competitors with a distinct narrative</div>
+
+        <div data-i18n="uk"><span class="check">✓</span> автоматизовано конвертацію товарних фото (HEIC/DNG/JPG → WebP) для швидшого завантаження</div>
+        <div data-i18n="en"><span class="check">✓</span> automated product photo conversion (HEIC/DNG/JPG → WebP) for faster page loads</div>
+
+        <div data-i18n="uk"><span class="check">✓</span> розроблено рекламні креативи FB/Instagram (текст + SVG-банери) під етапи воронки</div>
+        <div data-i18n="en"><span class="check">✓</span> created Facebook/Instagram ad creatives (copy + SVG banners) mapped to funnel stages</div>
+
+        <div data-i18n="uk"><span class="check">✓</span> побудовано контент-пайплайн: статті спершу українською, потім локалізація на 4+ мов</div>
+        <div data-i18n="en"><span class="check">✓</span> built a content pipeline: articles written in Ukrainian first, then localized into 4+ languages</div>
+
+        <div data-i18n="uk"><span class="check">✓</span> впроваджено FAQ/HowTo/BreadcrumbList розмітку для блогу Expert Advice<span class="cursor"></span></div>
+        <div data-i18n="en"><span class="check">✓</span> implemented FAQ/HowTo/BreadcrumbList schema across the Expert Advice content hub<span class="cursor"></span></div>
       </div>
     </div>
   </section>
