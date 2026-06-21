@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="uk" data-lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Юлія — SEO та digital-маркетинг для України та Європи</title>
+<meta name="description" content="Технічне SEO, контент і платна реклама для брендів в Україні та Європі. Аудити, структуровані дані, мультимовний контент, Meta Ads.">
+<link rel="canonical" href="https://example.com/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Юлія — SEO та digital-маркетинг">
+<meta property="og:description" content="Технічне SEO, контент і платна реклама для брендів в Україні та Європі.">
+<meta property="og:url" content="https://example.com/">
+<meta property="og:locale" content="uk_UA">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2316191F'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='16' fill='%232E4AE0' text-anchor='middle'%3EY%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Yuliia",
+  "jobTitle": "SEO & Digital Marketing Specialist",
+  "url": "https://example.com",
+  "knowsLanguage": ["uk", "en", "cs", "pl"],
+  "areaServed": ["Ukraine", "Czech Republic", "Europe"],
+  "makesOffer": [
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Technical SEO Audit"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Content Strategy & Copywriting"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Paid Social Advertising"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Analytics & Tracking Setup"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Link Building"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Multilingual Localization"}}
+  ]
+}
+</script>
+
+<style>
+  :root{
+    --paper:#F2F1EC;
+    --ink:#16191F;
+    --ink-soft:#585C63;
+    --link:#2E4AE0;
+    --indexed:#1C9B5E;
+    --line:#D8D6CD;
+    --chip:#E7E5DC;
+    --font-display:'Space Grotesk', sans-serif;
+    --font-body:'Inter', sans-serif;
+    --font-mono:'IBM Plex Mono', monospace;
+    --maxw:920px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--font-body);
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  html[data-lang="uk"] [data-i18n="en"]{display:none;}
+  html[data-lang="en"] [data-i18n="uk"]{display:none;}
+
+  a{color:var(--link);}
+  :focus-visible{outline:2px solid var(--link); outline-offset:3px;}
+
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 24px;}
+
+  /* Header */
+  header{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:28px 0;
+  }
+  .logo{
+    font-family:var(--font-mono); font-weight:500; font-size:15px;
+    letter-spacing:.02em;
+  }
+  .logo a{color:var(--ink); text-decoration:none;}
+
+  .lang-toggle{
+    display:inline-flex; border:1px solid var(--line); border-radius:999px;
+    padding:3px; background:var(--chip); font-family:var(--font-mono); font-size:13px;
+  }
+  .lang-toggle button{
+    border:none; background:transparent; padding:5px 12px; border-radius:999px;
+    cursor:pointer; color:var(--ink-soft); font-family:inherit; font-size:inherit;
+  }
+  .lang-toggle button.is-active{ background:var(--ink); color:var(--paper); }
+
+  /* Hero */
+  .hero{ padding:48px 0 64px; }
+  .breadcrumb{
+    font-family:var(--font-mono); font-size:13px; color:var(--ink-soft); margin:0 0 18px;
+  }
+  .serp-card{
+    border:1px solid var(--line); border-radius:10px; background:#fff;
+    padding:28px 28px 24px; max-width:640px;
+  }
+  .serp-title{
+    margin:0 0 8px; font-family:var(--font-display); font-weight:600;
+    font-size:clamp(22px,3.4vw,28px); color:var(--link); line-height:1.25;
+  }
+  .serp-desc{ margin:0; color:var(--ink-soft); font-size:15.5px; }
+
+  .hero-headline{
+    font-family:var(--font-display); font-weight:700;
+    font-size:clamp(34px,6vw,58px); line-height:1.05; letter-spacing:-.01em;
+    margin:36px 0 16px; max-width:14ch;
+  }
+  .hero-sub{ font-size:18px; color:var(--ink-soft); max-width:52ch; margin:0 0 32px; }
+
+  .cta-row{ display:flex; gap:14px; flex-wrap:wrap; }
+  .btn{
+    font-family:var(--font-mono); font-size:14px; text-decoration:none;
+    padding:13px 22px; border-radius:6px; display:inline-block;
+  }
+  .btn-primary{ background:var(--ink); color:var(--paper); }
+  .btn-secondary{ border:1px solid var(--line); color:var(--ink); }
+
+  /* Section shared */
+  section{ padding:56px 0; border-top:1px solid var(--line); }
+  .eyebrow{
+    font-family:var(--font-mono); font-size:13px; color:var(--ink-soft);
+    text-transform:uppercase; letter-spacing:.08em; margin:0 0 12px;
+  }
+  h2{ font-family:var(--font-display); font-size:clamp(24px,3vw,32px); margin:0 0 28px; }
+
+  /* Services */
+  .services-grid{
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:18px;
+  }
+  .service-card{
+    border:1px solid var(--line); border-radius:10px; padding:22px; background:#fff;
+  }
+  .tag{
+    display:inline-block; font-family:var(--font-mono); font-size:12px;
+    background:var(--chip); padding:4px 9px; border-radius:4px; margin-bottom:14px;
+    color:var(--ink-soft); letter-spacing:.03em;
+  }
+  .service-card h3{ font-family:var(--font-display); font-size:17px; margin:0 0 8px; }
+  .service-card p{ margin:0; color:var(--ink-soft); font-size:14.5px; }
+
+  /* Markets */
+  .badges{ display:flex; gap:10px; flex-wrap:wrap; margin-top:20px; }
+  .badge{
+    font-family:var(--font-mono); font-size:13px; border:1px solid var(--line);
+    border-radius:999px; padding:6px 14px; display:inline-flex; align-items:center; gap:7px;
+    background:#fff;
+  }
+  .dot{ width:7px; height:7px; border-radius:50%; background:var(--indexed); display:inline-block; }
+  section p.lead{ max-width:60ch; color:var(--ink-soft); font-size:16px; }
+
+  /* Log / terminal */
+  .terminal{
+    background:var(--ink); color:var(--paper); border-radius:10px; overflow:hidden;
+    max-width:680px;
+  }
+  .terminal-bar{
+    display:flex; gap:6px; padding:12px 16px; border-bottom:1px solid rgba(255,255,255,.1);
+  }
+  .terminal-bar span{ width:9px; height:9px; border-radius:50%; background:rgba(255,255,255,.25); }
+  .terminal-body{ padding:20px 22px 24px; font-family:var(--font-mono); font-size:13.5px; }
+  .terminal-body div{ margin-bottom:11px; display:flex; gap:10px; }
+  .terminal-body div:last-child{ margin-bottom:0; }
+  .check{ color:var(--indexed); flex-shrink:0; }
+  .cursor{
+    display:inline-block; width:7px; height:14px; background:var(--indexed);
+    margin-left:2px; vertical-align:middle;
+  }
+
+  /* Contact */
+  .contact-list{ list-style:none; padding:0; margin:20px 0 0; font-family:var(--font-mono); font-size:15px; }
+  .contact-list li{ padding:10px 0; border-bottom:1px solid var(--line); display:flex; gap:14px; }
+  .contact-list li span:first-child{ color:var(--ink-soft); min-width:90px; }
+
+  footer{
+    padding:32px 0 48px; font-family:var(--font-mono); font-size:13px; color:var(--ink-soft);
+  }
+
+  /* Reveal animation */
+  @media (prefers-reduced-motion: no-preference){
+    .reveal{ opacity:0; transform:translateY(14px); transition:opacity .6s ease, transform .6s ease; }
+    .reveal.is-visible{ opacity:1; transform:none; }
+    @keyframes blink{ 50%{opacity:0;} }
+    .cursor{ animation:blink 1s step-end infinite; }
+  }
+
+  @media (max-width:560px){
+    .cta-row{ flex-direction:column; }
+    .btn{ text-align:center; }
+  }
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <div class="logo"><a href="#top">yuliia.dev</a></div>
+  <div class="lang-toggle" role="group" aria-label="Language / Мова">
+    <button type="button" data-set-lang="uk" class="is-active">UA</button>
+    <button type="button" data-set-lang="en">EN</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero wrap" id="top" style="border-top:none;">
+    <p class="breadcrumb">yuliia.dev › seo-and-marketing</p>
+
+    <div class="serp-card">
+      <p class="serp-title" data-i18n="uk">Юлія — SEO та digital-маркетинг</p>
+      <p class="serp-title" data-i18n="en">Yuliia — SEO &amp; Digital Marketing</p>
+      <p class="serp-desc" data-i18n="uk">Технічне SEO, контент і платна реклама для брендів в Україні та Європі.</p>
+      <p class="serp-desc" data-i18n="en">Technical SEO, content, and paid campaigns for brands in Ukraine and Europe.</p>
+    </div>
+
+    <h1 class="hero-headline" data-i18n="uk">Допомагаю бізнесу&nbsp;бути видимим у&nbsp;пошуку</h1>
+    <h1 class="hero-headline" data-i18n="en">I help businesses get found in search</h1>
+
+    <p class="hero-sub" data-i18n="uk">Від технічних аудитів і структурованих даних до мультимовного контенту й рекламних кампаній у Meta Ads — працюю з ринками України та Європи.</p>
+    <p class="hero-sub" data-i18n="en">From technical audits and structured data to multilingual content and Meta Ads campaigns — working across Ukrainian and European markets.</p>
+
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#contact" data-i18n="uk">Написати</a>
+      <a class="btn btn-primary" href="#contact" data-i18n="en">Get in touch</a>
+      <a class="btn btn-secondary" href="#services" data-i18n="uk">Переглянути послуги</a>
+      <a class="btn btn-secondary" href="#services" data-i18n="en">View services</a>
+    </div>
+  </section>
+
+  <section class="wrap reveal" id="services">
+    <p class="eyebrow" data-i18n="uk">Послуги</p>
+    <p class="eyebrow" data-i18n="en">Services</p>
+    <h2 data-i18n="uk">Чим можу бути корисною</h2>
+    <h2 data-i18n="en">What I can do for you</h2>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <span class="tag">TECH-SEO</span>
+        <h3 data-i18n="uk">Технічний SEO-аудит</h3>
+        <h3 data-i18n="en">Technical SEO Audits</h3>
+        <p data-i18n="uk">Швидкість завантаження, індексація, structured data (Schema.org), hreflang для мультимовних сайтів.</p>
+        <p data-i18n="en">Site speed, indexation, Schema.org structured data, hreflang for multilingual sites.</p>
+      </div>
+
+      <div class="service-card">
+        <span class="tag">CONTENT</span>
+        <h3 data-i18n="uk">Контент-стратегія та копірайтинг</h3>
+        <h3 data-i18n="en">Content Strategy &amp; Copywriting</h3>
+        <p data-i18n="uk">SEO-статті, FAQ-блоки, лендинги — контент, який ранжується і добре читається.</p>
+        <p data-i18n="en">SEO articles, FAQ blocks, landing pages — content that ranks and reads well.</p>
+      </div>
+
+      <div class="service-card">
+        <span class="tag">PAID-ADS</span>
+        <h3 data-i18n="uk">Таргетована реклама</h3>
+        <h3 data-i18n="en">Paid Social Campaigns</h3>
+        <p data-i18n="uk">Кампанії у Meta Ads (Facebook/Instagram): від охоплення до конверсій, по етапах воронки.</p>
+        <p data-i18n="en">Meta Ads (Facebook/Instagram): from awareness to conversions, mapped to funnel stage.</p>
+      </div>
+
+      <div class="service-card">
+        <span class="tag">ANALYTICS</span>
+        <h3 data-i18n="uk">Аналітика та трекінг</h3>
+        <h3 data-i18n="en">Analytics &amp; Tracking</h3>
+        <p data-i18n="uk">Налаштування GA4, конверсій Google Ads, виправлення розривів через consent-менеджери та ITP.</p>
+        <p data-i18n="en">GA4 setup, Google Ads conversion tracking, fixing gaps caused by consent tools and ITP.</p>
+      </div>
+
+      <div class="service-card">
+        <span class="tag">LINKS</span>
+        <h3 data-i18n="uk">Лінкбілдинг</h3>
+        <h3 data-i18n="en">Link Building</h3>
+        <p data-i18n="uk">Органічні донор-статті з природним входженням посилань — без спаму й відвертої реклами.</p>
+        <p data-i18n="en">Organic donor articles with natural anchor placement — no spam, no obvious promo.</p>
+      </div>
+
+      <div class="service-card">
+        <span class="tag">I18N</span>
+        <h3 data-i18n="uk">Мультимовна локалізація</h3>
+        <h3 data-i18n="en">Multilingual Localization</h3>
+        <p data-i18n="uk">Адаптація контенту під кілька ринків: переклад, hreflang, мовні нюанси.</p>
+        <p data-i18n="en">Adapting content for multiple markets: translation, hreflang, local nuance.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap reveal" id="markets">
+    <p class="eyebrow" data-i18n="uk">Ринки</p>
+    <p class="eyebrow" data-i18n="en">Markets</p>
+    <h2 data-i18n="uk">Ринки та мови</h2>
+    <h2 data-i18n="en">Markets &amp; languages</h2>
+    <p class="lead" data-i18n="uk">Працюю з брендами, що виходять на українські та європейські ринки. SEO та контент — українською, англійською, чеською, польською.</p>
+    <p class="lead" data-i18n="en">I work with brands entering Ukrainian and European markets. SEO and content in Ukrainian, English, Czech, and Polish.</p>
+    <div class="badges">
+      <span class="badge"><span class="dot"></span> UA</span>
+      <span class="badge"><span class="dot"></span> EN</span>
+      <span class="badge"><span class="dot"></span> CZ</span>
+      <span class="badge"><span class="dot"></span> PL</span>
+    </div>
+  </section>
+
+  <section class="wrap reveal" id="proof">
+    <p class="eyebrow" data-i18n="uk">Лог</p>
+    <p class="eyebrow" data-i18n="en">Log</p>
+    <h2 data-i18n="uk">Що вже виправлено</h2>
+    <h2 data-i18n="en">Recently fixed</h2>
+
+    <div class="terminal">
+      <div class="terminal-bar"><span></span><span></span><span></span></div>
+      <div class="terminal-body">
+        <div data-i18n="uk"><span class="check">✓</span> hreflang налаштовано для 4 мовних версій сайту → коректна індексація</div>
+        <div data-i18n="en"><span class="check">✓</span> hreflang configured across 4 locales → correct indexing</div>
+
+        <div data-i18n="uk"><span class="check">✓</span> відновлено GA4-трекінг покупок, заблокований Safari ITP / Apple Pay</div>
+        <div data-i18n="en"><span class="check">✓</span> GA4 purchase tracking restored after Safari ITP / Apple Pay blocked it</div>
+
+        <div data-i18n="uk"><span class="check">✓</span> розблоковано конверсії Google Ads, які гасив consent-менеджер<span class="cursor"></span></div>
+        <div data-i18n="en"><span class="check">✓</span> Google Ads conversions unblocked from a consent-manager conflict<span class="cursor"></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap reveal" id="contact">
+    <p class="eyebrow" data-i18n="uk">Контакти</p>
+    <p class="eyebrow" data-i18n="en">Contact</p>
+    <h2 data-i18n="uk">Зв'язатися</h2>
+    <h2 data-i18n="en">Get in touch</h2>
+    <p class="lead" data-i18n="uk">Розкажіть про свій бізнес — запропоную, з чого почати.</p>
+    <p class="lead" data-i18n="en">Tell me about your business — I'll suggest where to start.</p>
+
+    <ul class="contact-list">
+      <li><span>Email</span><span><a href="mailto:you@example.com">you@example.com</a></span></li>
+      <li><span>Telegram</span><span><a href="https://t.me/your_handle">@your_handle</a></span></li>
+      <li><span>LinkedIn</span><span><a href="https://linkedin.com/in/your-profile">linkedin.com/in/your-profile</a></span></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="wrap">
+  <span data-i18n="uk">© 2026 Юлія. Зроблено вручну, без шаблонів.</span>
+  <span data-i18n="en">© 2026 Yuliia. Built by hand, no templates.</span>
+</footer>
+
+<script>
+  const buttons = document.querySelectorAll('[data-set-lang]');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const lang = btn.getAttribute('data-set-lang');
+      document.documentElement.lang = lang;
+      document.documentElement.setAttribute('data-lang', lang);
+      buttons.forEach(b => b.classList.toggle('is-active', b === btn));
+    });
+  });
+
+  if ('IntersectionObserver' in window) {
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('is-visible'); });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
+  }
+</script>
+
+</body>
+</html>
