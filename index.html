@@ -45,6 +45,20 @@
 }
 </script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Скільки часу займає SEO до перших результатів?", "acceptedAnswer": {"@type": "Answer", "text": "Перші технічні покращення помітні за кілька тижнів, відчутне зростання трафіку — зазвичай через 3–6 місяців, залежно від ніші та конкуренції."}},
+    {"@type": "Question", "name": "Чи працюєте з малим бізнесом?", "acceptedAnswer": {"@type": "Answer", "text": "Так, працюю як з малим бізнесом, так і з більшими e-commerce проєктами — підхід адаптується під масштаб і бюджет."}},
+    {"@type": "Question", "name": "Чи можете працювати з сайтом не на WordPress?", "acceptedAnswer": {"@type": "Answer", "text": "Так. Більшість технічних і SEO-робіт не залежать від CMS — головне доступ до коду чи адмінки."}},
+    {"@type": "Question", "name": "Якою мовою спілкуємось?", "acceptedAnswer": {"@type": "Answer", "text": "Українською, англійською або чеською — як вам зручніше."}},
+    {"@type": "Question", "name": "Скільки коштують послуги?", "acceptedAnswer": {"@type": "Answer", "text": "Вартість залежить від обсягу робіт і ринку. Напишіть кілька слів про проєкт — запропоную орієнтовний бюджет після короткого аудиту."}}
+  ]
+}
+</script>
+
 <style>
   :root{
     --paper:#F2F1EC;
@@ -207,6 +221,50 @@
     padding:32px 0 48px; font-family:var(--font-mono); font-size:13px; color:var(--ink-soft);
   }
 
+  /* About */
+  .about-grid{ display:grid; grid-template-columns:200px 1fr; gap:36px; align-items:start; }
+  .about-card{
+    border:1px solid var(--line); border-radius:10px; background:#fff; padding:24px;
+    text-align:center;
+  }
+  .avatar{
+    width:72px; height:72px; border-radius:50%; background:var(--chip); border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center; margin:0 auto 14px;
+    font-family:var(--font-mono); font-weight:600; font-size:20px; color:var(--link);
+  }
+  .about-name{ font-family:var(--font-display); font-weight:600; font-size:16px; margin:0 0 4px; }
+  .about-role{ font-size:13px; color:var(--ink-soft); margin:0; }
+  .stats-row{ display:flex; gap:32px; flex-wrap:wrap; margin-top:28px; }
+  .stat{ display:flex; flex-direction:column; }
+  .stat-num{ font-family:var(--font-display); font-weight:700; font-size:32px; color:var(--link); line-height:1; }
+  .stat-label{ font-family:var(--font-mono); font-size:12.5px; color:var(--ink-soft); margin-top:6px; max-width:14ch; }
+
+  /* Process */
+  .process-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px; }
+  .process-step{ border-top:2px solid var(--line); padding-top:16px; }
+  .step-num{ font-family:var(--font-mono); font-size:13px; color:var(--link); font-weight:600; }
+  .process-step h3{ font-family:var(--font-display); font-size:16.5px; margin:10px 0 8px; }
+  .process-step p{ margin:0; color:var(--ink-soft); font-size:14px; }
+
+  /* FAQ */
+  .faq-list{ display:flex; flex-direction:column; max-width:720px; }
+  .faq-list details{ border-bottom:1px solid var(--line); padding:18px 0; }
+  .faq-list summary{
+    cursor:pointer; font-family:var(--font-display); font-weight:600; font-size:16px;
+    list-style:none; display:flex; justify-content:space-between; align-items:center; gap:16px;
+  }
+  .faq-list summary::-webkit-details-marker{ display:none; }
+  .faq-list summary::after{
+    content:'+'; font-family:var(--font-mono); color:var(--ink-soft); flex-shrink:0; font-size:18px;
+  }
+  .faq-list details[open] summary::after{ content:'\2212'; }
+  .faq-list details p{ margin:12px 0 0; color:var(--ink-soft); font-size:14.5px; line-height:1.6; }
+
+  @media (max-width:640px){
+    .about-grid{ grid-template-columns:1fr; }
+    .about-card{ max-width:200px; }
+  }
+
   /* Reveal animation */
   @media (prefers-reduced-motion: no-preference){
     .reveal{ opacity:0; transform:translateY(14px); transition:opacity .6s ease, transform .6s ease; }
@@ -253,6 +311,43 @@
       <a class="btn btn-primary" href="#contact" data-i18n="en">Get in touch</a>
       <a class="btn btn-secondary" href="#services" data-i18n="uk">Переглянути послуги</a>
       <a class="btn btn-secondary" href="#services" data-i18n="en">View services</a>
+    </div>
+  </section>
+
+  <section class="wrap reveal" id="about">
+    <div class="about-grid">
+      <div class="about-card">
+        <div class="avatar">ЮК</div>
+        <p class="about-name">Yuliia Kvitchasta</p>
+        <p class="about-role" data-i18n="uk">SEO та digital-маркетинг</p>
+        <p class="about-role" data-i18n="en">SEO &amp; Digital Marketing</p>
+      </div>
+      <div class="about-body">
+        <p class="eyebrow" data-i18n="uk">Про мене</p>
+        <p class="eyebrow" data-i18n="en">About</p>
+        <h2 data-i18n="uk">Коротко про мене</h2>
+        <h2 data-i18n="en">A bit about me</h2>
+        <p class="lead" data-i18n="uk">Працюю в SEO та digital-маркетингу кілька років, фокусуючись на технічній стороні та мультимовних проєктах. Поєдную аудит, контент і платну рекламу в одну стратегію — замість розрізнених послуг від різних підрядників.</p>
+        <p class="lead" data-i18n="en">I've spent several years in SEO and digital marketing, focused on the technical side and multilingual projects. I combine audits, content, and paid ads into one strategy — instead of juggling separate vendors.</p>
+
+        <div class="stats-row">
+          <div class="stat">
+            <span class="stat-num">9</span>
+            <span class="stat-label" data-i18n="uk">напрямків послуг</span>
+            <span class="stat-label" data-i18n="en">service areas</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">4+</span>
+            <span class="stat-label" data-i18n="uk">мови контенту</span>
+            <span class="stat-label" data-i18n="en">languages</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">2</span>
+            <span class="stat-label" data-i18n="uk">ринки: UA + EU</span>
+            <span class="stat-label" data-i18n="en">markets: UA + EU</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -399,6 +494,62 @@
     </div>
   </section>
 
+  <section class="wrap reveal" id="process">
+    <p class="eyebrow" data-i18n="uk">Як ми працюємо</p>
+    <p class="eyebrow" data-i18n="en">Process</p>
+    <h2 data-i18n="uk">Чотири кроки до результату</h2>
+    <h2 data-i18n="en">Four steps to results</h2>
+
+    <div class="process-grid">
+      <div class="process-step">
+        <span class="step-num">01</span>
+        <h3 data-i18n="uk">Заявка</h3>
+        <h3 data-i18n="en">Get in touch</h3>
+        <p data-i18n="uk">Розповідаєте про бізнес і цілі — відповідаю протягом 1–2 днів.</p>
+        <p data-i18n="en">Tell me about your business and goals — I reply within 1–2 days.</p>
+      </div>
+      <div class="process-step">
+        <span class="step-num">02</span>
+        <h3 data-i18n="uk">Аудит</h3>
+        <h3 data-i18n="en">Audit</h3>
+        <p data-i18n="uk">Аналізую сайт, конкурентів і поточний стан SEO та реклами.</p>
+        <p data-i18n="en">I review your site, competitors, and current SEO/ads setup.</p>
+      </div>
+      <div class="process-step">
+        <span class="step-num">03</span>
+        <h3 data-i18n="uk">Стратегія</h3>
+        <h3 data-i18n="en">Strategy</h3>
+        <p data-i18n="uk">Пропоную конкретний план: що, в якому порядку і навіщо.</p>
+        <p data-i18n="en">I propose a concrete plan: what, in what order, and why.</p>
+      </div>
+      <div class="process-step">
+        <span class="step-num">04</span>
+        <h3 data-i18n="uk">Виконання</h3>
+        <h3 data-i18n="en">Execution</h3>
+        <p data-i18n="uk">Впроваджую зміни і звітую про результат зрозумілою мовою.</p>
+        <p data-i18n="en">I implement the changes and report results in plain language.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap reveal" id="tools">
+    <p class="eyebrow" data-i18n="uk">Стек</p>
+    <p class="eyebrow" data-i18n="en">Stack</p>
+    <h2 data-i18n="uk">З чим працюю</h2>
+    <h2 data-i18n="en">Tools I work with</h2>
+    <div class="badges">
+      <span class="badge">Google Analytics 4</span>
+      <span class="badge">Google Tag Manager</span>
+      <span class="badge">Google Ads</span>
+      <span class="badge">Meta Ads Manager</span>
+      <span class="badge">Ahrefs</span>
+      <span class="badge">WordPress / qTranslate</span>
+      <span class="badge">Schema.org / JSON-LD</span>
+      <span class="badge">HTML</span>
+      <span class="badge">Google Search Console</span>
+    </div>
+  </section>
+
   <section class="wrap reveal" id="markets">
     <p class="eyebrow" data-i18n="uk">Ринки</p>
     <p class="eyebrow" data-i18n="en">Markets</p>
@@ -450,6 +601,59 @@
         <div data-i18n="uk"><span class="check">✓</span> впроваджено FAQ/HowTo/BreadcrumbList розмітку для блогу Expert Advice<span class="cursor"></span></div>
         <div data-i18n="en"><span class="check">✓</span> implemented FAQ/HowTo/BreadcrumbList schema across the Expert Advice content hub<span class="cursor"></span></div>
       </div>
+    </div>
+  </section>
+
+  <section class="wrap reveal" id="faq">
+    <p class="eyebrow" data-i18n="uk">Питання</p>
+    <p class="eyebrow" data-i18n="en">FAQ</p>
+    <h2 data-i18n="uk">Часті запитання</h2>
+    <h2 data-i18n="en">Frequently asked questions</h2>
+
+    <div class="faq-list" data-i18n="uk">
+      <details name="faq-uk">
+        <summary>Скільки часу займає SEO до перших результатів?</summary>
+        <p>Перші технічні покращення помітні за кілька тижнів, відчутне зростання трафіку — зазвичай через 3–6 місяців, залежно від ніші та конкуренції.</p>
+      </details>
+      <details name="faq-uk">
+        <summary>Чи працюєте з малим бізнесом?</summary>
+        <p>Так, працюю як з малим бізнесом, так і з більшими e-commerce проєктами — підхід адаптується під масштаб і бюджет.</p>
+      </details>
+      <details name="faq-uk">
+        <summary>Чи можете працювати з сайтом не на WordPress?</summary>
+        <p>Так. Більшість технічних і SEO-робіт не залежать від CMS — головне доступ до коду чи адмінки.</p>
+      </details>
+      <details name="faq-uk">
+        <summary>Якою мовою спілкуємось?</summary>
+        <p>Українською, англійською або чеською — як вам зручніше.</p>
+      </details>
+      <details name="faq-uk">
+        <summary>Скільки коштують послуги?</summary>
+        <p>Вартість залежить від обсягу робіт і ринку. Напишіть кілька слів про проєкт — запропоную орієнтовний бюджет після короткого аудиту.</p>
+      </details>
+    </div>
+
+    <div class="faq-list" data-i18n="en">
+      <details name="faq-en">
+        <summary>How long until I see SEO results?</summary>
+        <p>Technical fixes show up within weeks; noticeable traffic growth usually takes 3–6 months, depending on niche and competition.</p>
+      </details>
+      <details name="faq-en">
+        <summary>Do you work with small businesses?</summary>
+        <p>Yes — I work with both small businesses and larger e-commerce projects, adapting the approach to scale and budget.</p>
+      </details>
+      <details name="faq-en">
+        <summary>Can you work with a site that isn't on WordPress?</summary>
+        <p>Yes. Most technical and SEO work isn't CMS-dependent — what matters is access to the code or admin panel.</p>
+      </details>
+      <details name="faq-en">
+        <summary>What language do we communicate in?</summary>
+        <p>Ukrainian, English, or Czech — whichever works best for you.</p>
+      </details>
+      <details name="faq-en">
+        <summary>How much do your services cost?</summary>
+        <p>Cost depends on scope and market. Tell me a bit about your project — I'll suggest a ballpark after a short audit.</p>
+      </details>
     </div>
   </section>
 
