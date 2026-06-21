@@ -194,6 +194,14 @@
   .contact-list{ list-style:none; padding:0; margin:20px 0 0; font-family:var(--font-mono); font-size:15px; }
   .contact-list li{ padding:10px 0; border-bottom:1px solid var(--line); display:flex; gap:14px; }
   .contact-list li span:first-child{ color:var(--ink-soft); min-width:90px; }
+  .email-row{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+  .copy-email{
+    font-family:var(--font-mono); font-size:15px; color:var(--link);
+    background:none; border:none; padding:0; cursor:pointer; text-decoration:underline;
+    text-underline-offset:3px;
+  }
+  .copy-email.is-copied{ color:var(--indexed); }
+  .copy-hint{ font-size:12px; color:var(--ink-soft); }
 
   footer{
     padding:32px 0 48px; font-family:var(--font-mono); font-size:13px; color:var(--ink-soft);
@@ -241,8 +249,8 @@
     <p class="hero-sub" data-i18n="en">From technical audits and structured data to multilingual content and Meta Ads campaigns — working across Ukrainian and European markets.</p>
 
     <div class="cta-row">
-      <a class="btn btn-primary" href="mailto:yuliiakvitchasta@gmail.com" data-i18n="uk">Написати</a>
-      <a class="btn btn-primary" href="mailto:yuliiakvitchasta@gmail.com" data-i18n="en">Get in touch</a>
+      <a class="btn btn-primary" href="#contact" data-i18n="uk">Написати</a>
+      <a class="btn btn-primary" href="#contact" data-i18n="en">Get in touch</a>
       <a class="btn btn-secondary" href="#services" data-i18n="uk">Переглянути послуги</a>
       <a class="btn btn-secondary" href="#services" data-i18n="en">View services</a>
     </div>
@@ -454,7 +462,14 @@
     <p class="lead" data-i18n="en">Tell me about your business — I'll suggest where to start.</p>
 
     <ul class="contact-list">
-      <li><span>Email</span><span><a href="mailto:yuliiakvitchasta@gmail.com">yuliiakvitchasta@gmail.com</a></span></li>
+      <li>
+        <span>Email</span>
+        <span class="email-row">
+          <button type="button" class="copy-email" data-copy="yuliiakvitchasta@gmail.com">yuliiakvitchasta@gmail.com</button>
+          <span class="copy-hint" data-i18n="uk">(натисніть, щоб скопіювати)</span>
+          <span class="copy-hint" data-i18n="en">(click to copy)</span>
+        </span>
+      </li>
       <li><span>Telegram</span><span><a href="https://t.me/yuliia_mwsproweb">@yuliia_mwsproweb</a></span></li>
       <li><span>LinkedIn</span><span><a href="https://linkedin.com/in/yuliia-kvitchasta-%F0%9F%87%BA%F0%9F%87%A6-2b5b07103">linkedin.com/in/yuliia-kvitchasta</a></span></li>
     </ul>
@@ -474,6 +489,32 @@
       document.documentElement.lang = lang;
       document.documentElement.setAttribute('data-lang', lang);
       buttons.forEach(b => b.classList.toggle('is-active', b === btn));
+    });
+  });
+
+  document.querySelectorAll('.copy-email').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const text = btn.getAttribute('data-copy');
+      try {
+        await navigator.clipboard.writeText(text);
+      } catch (e) {
+        const tmp = document.createElement('textarea');
+        tmp.value = text;
+        document.body.appendChild(tmp);
+        tmp.select();
+        document.execCommand('copy');
+        document.body.removeChild(tmp);
+      }
+      const hints = btn.parentElement.querySelectorAll('.copy-hint');
+      btn.classList.add('is-copied');
+      hints.forEach(h => {
+        h.dataset.original = h.dataset.original || h.textContent;
+        h.textContent = h.dataset.i18n === 'uk' ? '(скопійовано ✓)' : '(copied ✓)';
+      });
+      setTimeout(() => {
+        btn.classList.remove('is-copied');
+        hints.forEach(h => { h.textContent = h.dataset.original; });
+      }, 2000);
     });
   });
 
