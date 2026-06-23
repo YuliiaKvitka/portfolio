@@ -37,9 +37,15 @@
       font-family: var(--sans);
       font-size: 15px;
       line-height: 1.65;
-      font-weight: 300;
+      font-weight: 400;
       -webkit-font-smoothing: antialiased;
     }
+
+    /* ── MAX-WIDTH via padding trick ── */
+    /* Full-width bg preserved; content auto-centered up to 1160px */
+    :root { --gutter: max(24px, calc((100vw - 1160px) / 2)); }
+    .section-inner { max-width: 1160px; margin: 0 auto; }
+
 
     /* ── UTILITY ── */
     .label {
@@ -62,15 +68,20 @@
       position: fixed;
       top: 0; left: 0; right: 0;
       z-index: 100;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 18px 48px;
       background: var(--bg);
       border-bottom: 1px solid transparent;
       transition: border-color .3s;
+      padding: 0 var(--gutter);
     }
     nav.scrolled { border-bottom-color: var(--rule); }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 0;
+      max-width: 1160px;
+      margin: 0 auto;
+    }
 
     .nav-logo {
       font-family: var(--serif);
@@ -121,7 +132,7 @@
 
     /* ── HERO ── */
     .hero {
-      padding: 140px 48px 80px;
+      padding: 140px var(--gutter) 80px;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 0 80px;
@@ -266,7 +277,7 @@
 
     /* ── SECTION WRAPPER ── */
     .section {
-      padding: 80px 48px;
+      padding: 80px var(--gutter);
       border-top: 1px solid var(--rule);
     }
     .section-header {
@@ -318,7 +329,7 @@
       margin-bottom: 12px;
     }
     .problem-body {
-      font-size: 13px;
+      font-size: 14px;
       color: var(--ink-mid);
       line-height: 1.65;
     }
@@ -355,8 +366,8 @@
       margin-top: 2px;
     }
     .log-text {
-      font-size: 13px;
-      color: var(--ink-mid);
+      font-size: 14px;
+      color: var(--ink);
       line-height: 1.6;
     }
 
@@ -453,7 +464,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 20px 48px;
+      padding: 20px var(--gutter);
       background: var(--ink);
       color: rgba(244,240,232,.35);
       font-size: 11px;
@@ -469,16 +480,10 @@
     .footer-top:hover { color: var(--bg); }
 
     /* ── RESPONSIVE ── */
-    @media (max-width: 900px) {
-      nav {
-        padding: 14px 20px;
-        flex-wrap: wrap;
-        gap: 8px;
-      }
-      .nav-links {
-        gap: 16px;
-        flex-wrap: wrap;
-      }
+    @media (max-width: 860px) {
+      :root { --gutter: 20px; }
+
+      nav { padding: 0 20px; }
       .nav-links li:nth-child(1),
       .nav-links li:nth-child(2),
       .nav-links li:nth-child(3),
@@ -490,31 +495,25 @@
         grid-template-columns: 1fr;
         padding: 90px 20px 48px;
         min-height: auto;
-        gap: 40px;
+        gap: 36px;
       }
       .hero-left { padding-bottom: 0; }
-      .hero-right {
-        display: flex;
-        order: -1;
-      }
-      .hero-photo-wrap {
-        max-width: 220px;
-        margin: 0 auto;
-      }
+      .hero-right { display: flex; order: -1; }
+      .hero-photo-wrap { max-width: 200px; margin: 0 auto; }
       .hero-photo-caption { display: none; }
-      .hero-headline { font-size: clamp(36px, 9vw, 56px); }
+      .hero-headline { font-size: clamp(34px, 9vw, 54px); }
       .hero-sub { max-width: 100%; }
       .hero-stats { gap: 20px; }
       .stat-number { font-size: 28px; }
 
       /* SECTIONS */
-      .section { padding: 48px 20px; }
-      .section-header { flex-direction: column; gap: 8px; margin-bottom: 36px; }
+      .section { padding: 52px 20px; }
+      .section-header { flex-direction: column; gap: 6px; margin-bottom: 36px; }
       .section-title { font-size: clamp(26px, 7vw, 36px); }
 
       /* GRIDS → single column */
-      .problems-grid { grid-template-columns: 1fr; }
-      .services-grid { grid-template-columns: 1fr; }
+      .problems-grid,
+      .services-grid,
       .log-list { grid-template-columns: 1fr; }
       .about-grid { grid-template-columns: 1fr; gap: 36px; }
       .about-meta { grid-template-columns: 1fr 1fr; }
@@ -527,24 +526,24 @@
       .markets-row { flex-direction: column; align-items: flex-start; gap: 12px; }
 
       /* FAQ */
-      .faq-q { padding: 18px 20px; font-size: 14px; }
-      .faq-a { padding: 16px 20px 22px; }
+      .faq-q { padding: 18px 16px; font-size: 14px; }
+      .faq-a { padding: 14px 16px 22px; }
 
       /* CONTACT */
       .contact-inner { grid-template-columns: 1fr; gap: 40px; }
       .contact-title { font-size: clamp(28px, 8vw, 44px); }
 
-      .footer { padding: 18px 20px; flex-direction: column; gap: 10px; text-align: center; }
+      .footer { padding: 18px 20px; flex-direction: column; gap: 8px; text-align: center; }
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: 480px) {
       .process-list { grid-template-columns: 1fr; }
-      .hero-stats { flex-direction: row; gap: 16px; }
       .service-item,
-      .problem-item { padding: 28px 20px; }
-      .log-item { padding: 18px 20px; }
-      .about-meta-item { padding: 20px 18px; }
+      .problem-item { padding: 26px 20px; }
+      .log-item { padding: 18px 16px; }
+      .about-meta-item { padding: 20px 16px; }
       .stack-tag { font-size: 11px; padding: 7px 12px; }
+      .hero-cta { flex-direction: column; align-items: flex-start; gap: 14px; }
     }
 
     /* ── SERVICES ── */
@@ -577,7 +576,7 @@
       margin-bottom: 10px;
     }
     .service-body {
-      font-size: 13px;
+      font-size: 14px;
       color: var(--ink-mid);
       line-height: 1.65;
     }
@@ -650,16 +649,17 @@
     /* ── ABOUT ── */
     .about-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
+      grid-template-columns: 3fr 2fr;
+      gap: 64px;
       align-items: start;
     }
     .about-body {
       font-size: 16px;
-      line-height: 1.75;
-      color: var(--ink-mid);
+      line-height: 1.8;
+      color: var(--ink);
+      font-weight: 400;
     }
-    .about-body p + p { margin-top: 20px; }
+    .about-body p + p { margin-top: 22px; }
     .about-meta {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -693,17 +693,19 @@
 
 <!-- NAV -->
 <nav id="nav">
-  <a href="#top" class="nav-logo">Yuliia Kvitchasta</a>
-  <ul class="nav-links">
-    <li><a href="#about"><span data-lang="uk">Про мене</span><span data-lang="en">About</span></a></li>
-    <li><a href="#services"><span data-lang="uk">Послуги</span><span data-lang="en">Services</span></a></li>
-    <li><a href="#log"><span data-lang="uk">Лог</span><span data-lang="en">Log</span></a></li>
-    <li><a href="#contact"><span data-lang="uk">Контакт</span><span data-lang="en">Contact</span></a></li>
-    <li class="lang-toggle">
-      <button class="lang-btn active" data-lang-switch="uk">UA</button>
-      <button class="lang-btn" data-lang-switch="en">EN</button>
-    </li>
-  </ul>
+  <div class="nav-inner">
+    <a href="#top" class="nav-logo">Yuliia Kvitchasta</a>
+    <ul class="nav-links">
+      <li><a href="#about"><span data-lang="uk">Про мене</span><span data-lang="en">About</span></a></li>
+      <li><a href="#services"><span data-lang="uk">Послуги</span><span data-lang="en">Services</span></a></li>
+      <li><a href="#log"><span data-lang="uk">Лог</span><span data-lang="en">Log</span></a></li>
+      <li><a href="#contact"><span data-lang="uk">Контакт</span><span data-lang="en">Contact</span></a></li>
+      <li class="lang-toggle">
+        <button class="lang-btn active" data-lang-switch="uk">UA</button>
+        <button class="lang-btn" data-lang-switch="en">EN</button>
+      </li>
+    </ul>
+  </div>
 </nav>
 
 <!-- HERO -->
