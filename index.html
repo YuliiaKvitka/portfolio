@@ -470,23 +470,81 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
-      nav { padding: 16px 24px; }
-      .nav-links { gap: 20px; }
-      .hero { grid-template-columns: 1fr; padding: 120px 24px 60px; min-height: auto; }
-      .hero-right { display: none; }
-      .section { padding: 60px 24px; }
-      .problems-grid,
+      nav {
+        padding: 14px 20px;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .nav-links {
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .nav-links li:nth-child(1),
+      .nav-links li:nth-child(2),
+      .nav-links li:nth-child(3),
+      .nav-links li:nth-child(4) { display: none; }
+      .lang-toggle { margin-left: 0; border-left: none; padding-left: 0; }
+
+      /* HERO — stacked, photo above text */
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 90px 20px 48px;
+        min-height: auto;
+        gap: 40px;
+      }
+      .hero-left { padding-bottom: 0; }
+      .hero-right {
+        display: flex;
+        order: -1;
+      }
+      .hero-photo-wrap {
+        max-width: 220px;
+        margin: 0 auto;
+      }
+      .hero-photo-caption { display: none; }
+      .hero-headline { font-size: clamp(36px, 9vw, 56px); }
+      .hero-sub { max-width: 100%; }
+      .hero-stats { gap: 20px; }
+      .stat-number { font-size: 28px; }
+
+      /* SECTIONS */
+      .section { padding: 48px 20px; }
+      .section-header { flex-direction: column; gap: 8px; margin-bottom: 36px; }
+      .section-title { font-size: clamp(26px, 7vw, 36px); }
+
+      /* GRIDS → single column */
+      .problems-grid { grid-template-columns: 1fr; }
       .services-grid { grid-template-columns: 1fr; }
-      .process-list { grid-template-columns: 1fr 1fr; }
       .log-list { grid-template-columns: 1fr; }
-      .about-grid { grid-template-columns: 1fr; gap: 40px; }
-      .contact-inner { grid-template-columns: 1fr; gap: 48px; }
-      .footer { padding: 20px 24px; }
+      .about-grid { grid-template-columns: 1fr; gap: 36px; }
+      .about-meta { grid-template-columns: 1fr 1fr; }
+
+      /* PROCESS → 2 cols */
+      .process-list { grid-template-columns: 1fr 1fr; }
+      .process-num { font-size: 36px; }
+
+      /* STACK */
+      .markets-row { flex-direction: column; align-items: flex-start; gap: 12px; }
+
+      /* FAQ */
+      .faq-q { padding: 18px 20px; font-size: 14px; }
+      .faq-a { padding: 16px 20px 22px; }
+
+      /* CONTACT */
+      .contact-inner { grid-template-columns: 1fr; gap: 40px; }
+      .contact-title { font-size: clamp(28px, 8vw, 44px); }
+
+      .footer { padding: 18px 20px; flex-direction: column; gap: 10px; text-align: center; }
     }
-    @media (max-width: 600px) {
-      .nav-links li:not(:last-child) { display: none; }
+
+    @media (max-width: 500px) {
       .process-list { grid-template-columns: 1fr; }
-      .hero-stats { gap: 24px; }
+      .hero-stats { flex-direction: row; gap: 16px; }
+      .service-item,
+      .problem-item { padding: 28px 20px; }
+      .log-item { padding: 18px 20px; }
+      .about-meta-item { padding: 20px 18px; }
+      .stack-tag { font-size: 11px; padding: 7px 12px; }
     }
 
     /* ── SERVICES ── */
@@ -698,7 +756,7 @@
 
   <div class="hero-right">
     <div class="hero-photo-wrap">
-      <img src="yuliia-photo.jpg" alt="Yuliia Kvitchasta">
+      <img src="https://portfolio-neon-alpha-54.vercel.app/yuliia-photo.jpg" alt="Yuliia Kvitchasta">
       <span class="hero-photo-caption">Yuliia Kvitchasta / SEO & Digital Marketing</span>
     </div>
   </div>
