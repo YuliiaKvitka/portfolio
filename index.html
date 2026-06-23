@@ -59,9 +59,9 @@
     .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
 
     /* ── HIDE BY LANGUAGE ── */
-    [data-lang="en"] { display: none; }
-    body.lang-en [data-lang="uk"] { display: none; }
-    body.lang-en [data-lang="en"] { display: revert; }
+    [data-lang="en"] { display: none !important; }
+    body.lang-en [data-lang="uk"] { display: none !important; }
+    body.lang-en [data-lang="en"] { display: revert !important; }
 
     /* ── NAV ── */
     nav {
@@ -271,7 +271,7 @@
       letter-spacing: .14em;
       text-transform: uppercase;
       color: var(--ink-light);
-      display: block;
+      display: block !important;
       margin-top: 4px;
     }
 
@@ -319,7 +319,7 @@
       text-transform: uppercase;
       color: var(--accent);
       margin-bottom: 16px;
-      display: block;
+      display: block !important;
     }
     .problem-title {
       font-family: var(--serif);
@@ -459,6 +459,31 @@
     }
     .contact-link:hover { border-color: var(--bg); }
 
+    /* email copy */
+    .email-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .copy-hint {
+      font-size: 10px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: rgba(244,240,232,.35);
+      cursor: pointer;
+      border: 1px solid rgba(244,240,232,.15);
+      padding: 3px 8px;
+      transition: color .2s, border-color .2s;
+      user-select: none;
+      white-space: nowrap;
+    }
+    .copy-hint:hover { color: rgba(244,240,232,.7); border-color: rgba(244,240,232,.4); }
+    .copy-hint.copied {
+      color: var(--accent-lt);
+      border-color: var(--accent-lt);
+    }
+
     /* ── FOOTER ── */
     .footer {
       display: flex;
@@ -565,7 +590,7 @@
       letter-spacing: .2em;
       text-transform: uppercase;
       color: var(--accent);
-      display: block;
+      display: block !important;
       margin-bottom: 14px;
     }
     .service-title {
@@ -600,7 +625,7 @@
       font-weight: 300;
       color: var(--rule);
       line-height: 1;
-      display: block;
+      display: block !important;
       margin-bottom: 20px;
     }
     .process-title {
@@ -684,8 +709,29 @@
       letter-spacing: .14em;
       text-transform: uppercase;
       color: var(--ink-light);
-      display: block;
+      display: block !important;
       margin-top: 6px;
+    }
+    /* on mobile, stats sit below text in a row */
+    @media (max-width: 860px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+      .about-meta {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .about-meta-item {
+        padding: 20px 16px;
+      }
+      .about-meta-num {
+        font-size: 30px;
+      }
+    }
+    @media (max-width: 560px) {
+      .about-meta {
+        grid-template-columns: 1fr 1fr;
+      }
     }
   </style>
 </head>
@@ -1259,7 +1305,13 @@
     <div class="contact-links">
       <div class="contact-link-group">
         <span class="label">Email</span>
-        <a href="mailto:yuliiakvitchasta@gmail.com" class="contact-link">yuliiakvitchasta@gmail.com</a>
+        <div class="email-wrap">
+          <a href="mailto:yuliiakvitchasta@gmail.com" class="contact-link" id="email-link">yuliiakvitchasta@gmail.com</a>
+          <span class="copy-hint" id="copy-btn">
+            <span data-lang="uk">копіювати</span>
+            <span data-lang="en">copy</span>
+          </span>
+        </div>
       </div>
       <div class="contact-link-group">
         <span class="label">Telegram</span>
@@ -1300,15 +1352,32 @@
   const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
   window.addEventListener('scroll', onScroll, { passive: true });
 
-  // Email copy on click
-  document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
-    link.addEventListener('click', e => {
-      if (e.metaKey || e.ctrlKey) return; // let cmd+click open mail
-      const email = link.getAttribute('href').replace('mailto:', '').split('?')[0];
-      if (navigator.clipboard) {
-        navigator.clipboard.writeText(email).catch(() => {});
-      }
+  // Email copy
+  const email = 'yuliiakvitchasta@gmail.com';
+  const copyBtn = document.getElementById('copy-btn');
+  const emailLink = document.getElementById('email-link');
+  const isUk = () => !document.body.classList.contains('lang-en');
+
+  function doCopy() {
+    if (!navigator.clipboard) return;
+    navigator.clipboard.writeText(email).then(() => {
+      const prev = copyBtn.querySelector('[data-lang="uk"]').textContent;
+      copyBtn.querySelector('[data-lang="uk"]').textContent = 'скопійовано ✓';
+      copyBtn.querySelector('[data-lang="en"]').textContent = 'copied ✓';
+      copyBtn.classList.add('copied');
+      setTimeout(() => {
+        copyBtn.querySelector('[data-lang="uk"]').textContent = 'копіювати';
+        copyBtn.querySelector('[data-lang="en"]').textContent = 'copy';
+        copyBtn.classList.remove('copied');
+      }, 2000);
     });
+  }
+
+  copyBtn?.addEventListener('click', doCopy);
+  // also copy when clicking the email text itself (don't open mail client)
+  emailLink?.addEventListener('click', e => {
+    e.preventDefault();
+    doCopy();
   });
 </script>
 </body>
