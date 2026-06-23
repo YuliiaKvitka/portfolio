@@ -1,822 +1,1255 @@
 <!DOCTYPE html>
-<html lang="uk" data-lang="uk">
+<html lang="uk">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Юлія - SEO та digital-маркетинг для України та Європи</title>
-<meta name="description" content="Технічне SEO, контент і платна реклама для брендів в Україні та Європі. Аудити, структуровані дані, мультимовний контент, Meta Ads.">
-<link rel="canonical" href="https://portfolio-neon-alpha-54.vercel.app/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title lang="uk">Юлія Квітчаста — SEO та digital-маркетинг</title>
+  <meta name="description" content="Технічне SEO, контент і платна реклама для брендів в Україні та Європі.">
+  <meta property="og:title" content="Юлія Квітчаста — SEO & Digital Marketing">
+  <meta property="og:description" content="Технічне SEO, контент і платна реклама для брендів в Україні та Європі.">
+  <meta property="og:image" content="yuliia-photo.jpg">
+  <meta property="og:locale" content="uk_UA">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-<!-- Open Graph -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Юлія - SEO та digital-маркетинг">
-<meta property="og:description" content="Технічне SEO, контент і платна реклама для брендів в Україні та Європі.">
-<meta property="og:url" content="https://portfolio-neon-alpha-54.vercel.app/">
-<meta property="og:image" content="https://portfolio-neon-alpha-54.vercel.app/yuliia-photo.jpg">
-<meta property="og:locale" content="uk_UA">
-<meta property="og:locale:alternate" content="en_US">
-<meta name="twitter:card" content="summary">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2316191F'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='16' fill='%232E4AE0' text-anchor='middle'%3EY%3C/text%3E%3C/svg%3E">
+    :root {
+      --bg:        #f4f0e8;
+      --bg-warm:   #ede9e0;
+      --ink:       #191714;
+      --ink-mid:   #5a544c;
+      --ink-light: #9a9086;
+      --rule:      #d6d0c6;
+      --accent:    #8b6347;
+      --accent-lt: #c4a882;
+      --serif:     'Cormorant Garamond', Georgia, serif;
+      --sans:      'Inter', system-ui, sans-serif;
+    }
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    html { scroll-behavior: smooth; }
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Yuliia",
-  "jobTitle": "SEO & Digital Marketing Specialist",
-  "url": "https://portfolio-neon-alpha-54.vercel.app",
-  "image": "https://portfolio-neon-alpha-54.vercel.app/yuliia-photo.jpg",
-  "knowsLanguage": ["uk", "en", "cs", "pl"],
-  "areaServed": ["Ukraine", "Czech Republic", "Europe"],
-  "makesOffer": [
-    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Technical SEO Audit"}},
-    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Content Strategy & Copywriting"}},
-    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Paid Social Advertising"}},
-    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Analytics & Tracking Setup"}},
-    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Link Building"}},
-    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Multilingual Localization"}},
-    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Google Ads Campaigns"}},
-    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "WordPress Website Development"}},
-    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Competitive Analysis & Positioning"}}
-  ]
-}
-</script>
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 15px;
+      line-height: 1.65;
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+    }
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {"@type": "Question", "name": "Скільки часу займає SEO до перших результатів?", "acceptedAnswer": {"@type": "Answer", "text": "Перші технічні покращення помітні за кілька тижнів, відчутне зростання трафіку - зазвичай через 3–6 місяців, залежно від ніші та конкуренції."}},
-    {"@type": "Question", "name": "Чи працюєте з малим бізнесом?", "acceptedAnswer": {"@type": "Answer", "text": "Так, працюю як з малим бізнесом, так і з більшими e-commerce проєктами - підхід адаптується під масштаб і бюджет."}},
-    {"@type": "Question", "name": "Чи можете працювати з сайтом не на WordPress?", "acceptedAnswer": {"@type": "Answer", "text": "Так. Більшість технічних і SEO-робіт не залежать від CMS - головне доступ до коду чи адмінки."}},
-    {"@type": "Question", "name": "Якою мовою спілкуємось?", "acceptedAnswer": {"@type": "Answer", "text": "Українською, англійською або чеською - як вам зручніше."}},
-    {"@type": "Question", "name": "Скільки коштують послуги?", "acceptedAnswer": {"@type": "Answer", "text": "Вартість залежить від обсягу робіт і ринку. Напишіть кілька слів про проєкт - запропоную орієнтовний бюджет після короткого аудиту."}}
-  ]
-}
-</script>
+    /* ── UTILITY ── */
+    .label {
+      font-size: 10px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      font-weight: 400;
+    }
+    .rule { border: none; border-top: 1px solid var(--rule); }
+    .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
 
-<style>
-  :root{
-    --paper:#F2F1EC;
-    --ink:#16191F;
-    --ink-soft:#585C63;
-    --link:#2E4AE0;
-    --indexed:#1C9B5E;
-    --line:#D8D6CD;
-    --chip:#E7E5DC;
-    --font-display:'Space Grotesk', sans-serif;
-    --font-body:'Inter', sans-serif;
-    --font-mono:'IBM Plex Mono', monospace;
-    --maxw:920px;
-  }
+    /* ── HIDE BY LANGUAGE ── */
+    [data-lang="en"] { display: none; }
+    body.lang-en [data-lang="uk"] { display: none; }
+    body.lang-en [data-lang="en"] { display: revert; }
 
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    margin:0;
-    background:var(--paper);
-    color:var(--ink);
-    font-family:var(--font-body);
-    line-height:1.5;
-    -webkit-font-smoothing:antialiased;
-  }
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 48px;
+      background: var(--bg);
+      border-bottom: 1px solid transparent;
+      transition: border-color .3s;
+    }
+    nav.scrolled { border-bottom-color: var(--rule); }
 
-  html[data-lang="uk"] [data-i18n="en"]{display:none;}
-  html[data-lang="en"] [data-i18n="uk"]{display:none;}
+    .nav-logo {
+      font-family: var(--serif);
+      font-size: 17px;
+      font-weight: 500;
+      letter-spacing: .02em;
+      color: var(--ink);
+      text-decoration: none;
+    }
 
-  a{color:var(--link);}
-  :focus-visible{outline:2px solid var(--link); outline-offset:3px;}
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 11px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--ink-mid);
+      text-decoration: none;
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--ink); }
 
-  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 32px;}
+    .lang-toggle {
+      display: flex;
+      gap: 2px;
+      margin-left: 20px;
+      border-left: 1px solid var(--rule);
+      padding-left: 20px;
+    }
+    .lang-btn {
+      font-size: 11px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 2px 5px;
+      transition: color .2s;
+      font-family: var(--sans);
+      font-weight: 400;
+    }
+    .lang-btn.active { color: var(--ink); }
 
-  /* Header */
-  header{
-    display:flex; align-items:center; justify-content:space-between;
-    padding:28px 0;
-  }
-  .logo{
-    font-family:var(--font-mono); font-weight:500; font-size:15px;
-    letter-spacing:.02em;
-  }
-  .logo a{color:var(--ink); text-decoration:none;}
+    /* ── HERO ── */
+    .hero {
+      padding: 140px 48px 80px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 80px;
+      align-items: end;
+      min-height: 92vh;
+      position: relative;
+    }
 
-  .lang-toggle{
-    display:inline-flex; border:1px solid var(--line); border-radius:999px;
-    padding:3px; background:var(--chip); font-family:var(--font-mono); font-size:13px;
-  }
-  .lang-toggle button{
-    border:none; background:transparent; padding:5px 12px; border-radius:999px;
-    cursor:pointer; color:var(--ink-soft); font-family:inherit; font-size:inherit;
-  }
-  .lang-toggle button.is-active{ background:var(--ink); color:var(--paper); }
+    .hero-left {
+      padding-bottom: 48px;
+    }
 
-  /* Hero */
-  .hero{ padding:48px 0 64px; }
-  .breadcrumb{
-    font-family:var(--font-mono); font-size:13px; color:var(--ink-soft); margin:0 0 18px;
-  }
-  .serp-card{
-    border:1px solid var(--line); border-radius:10px; background:#fff;
-    padding:28px 28px 24px; max-width:640px;
-  }
-  .serp-title{
-    margin:0 0 8px; font-family:var(--font-display); font-weight:600;
-    font-size:clamp(22px,3.4vw,28px); color:var(--link); line-height:1.25;
-  }
-  .serp-desc{ margin:0; color:var(--ink-soft); font-size:15.5px; }
+    .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+    .hero-eyebrow .label { color: var(--ink-light); }
+    .hero-eyebrow::before {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 1px;
+      background: var(--accent-lt);
+    }
 
-  .hero-headline{
-    font-family:var(--font-display); font-weight:700;
-    font-size:clamp(34px,6vw,58px); line-height:1.05; letter-spacing:-.01em;
-    margin:36px 0 16px; max-width:14ch;
-  }
-  .hero-sub{ font-size:18px; color:var(--ink-soft); max-width:52ch; margin:0 0 32px; }
+    .hero-headline {
+      font-family: var(--serif);
+      font-size: clamp(46px, 6vw, 80px);
+      font-weight: 300;
+      line-height: 1.08;
+      letter-spacing: -.01em;
+      color: var(--ink);
+      margin-bottom: 32px;
+    }
+    .hero-headline em {
+      font-style: italic;
+      color: var(--accent);
+    }
 
-  .cta-row{ display:flex; gap:14px; flex-wrap:wrap; }
-  .btn{
-    font-family:var(--font-mono); font-size:14px; text-decoration:none;
-    padding:13px 22px; border-radius:6px; display:inline-block;
-  }
-  .btn-primary{ background:var(--ink); color:var(--paper); }
-  .btn-secondary{ border:1px solid var(--line); color:var(--ink); }
+    .hero-sub {
+      font-size: 15px;
+      color: var(--ink-mid);
+      max-width: 380px;
+      line-height: 1.7;
+      margin-bottom: 48px;
+    }
 
-  /* Section shared */
-  section{ padding:56px 0; border-top:1px solid var(--line); }
-  .eyebrow{
-    font-family:var(--font-mono); font-size:13px; color:var(--ink-soft);
-    text-transform:uppercase; letter-spacing:.08em; margin:0 0 12px;
-  }
-  h2{ font-family:var(--font-display); font-size:clamp(24px,3vw,32px); margin:0 0 28px; }
+    .hero-cta {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
 
-  /* Services */
-  .services-grid{
-    display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:18px;
-  }
-  .service-card{
-    border:1px solid var(--line); border-radius:10px; padding:22px; background:#fff;
-  }
-  .service-icon{
-    width:34px; height:34px; color:var(--link); display:block; margin-bottom:16px;
-  }
-  @media (prefers-reduced-motion: no-preference){
-    .service-card{ transition:border-color .25s ease, transform .25s ease; }
-    .service-icon{ transition:transform .25s ease; }
-    .service-card:hover{ border-color:var(--link); transform:translateY(-2px); }
-    .service-card:hover .service-icon{ transform:scale(1.08); }
-  }
-  .tag{
-    display:inline-block; font-family:var(--font-mono); font-size:12px;
-    background:var(--chip); padding:4px 9px; border-radius:4px; margin-bottom:14px;
-    color:var(--ink-soft); letter-spacing:.03em;
-  }
-  .service-card h3{ font-family:var(--font-display); font-size:17px; margin:0 0 8px; }
-  .service-card p{ margin:0; color:var(--ink-soft); font-size:14.5px; }
+    .btn-primary {
+      display: inline-block;
+      padding: 13px 28px;
+      background: var(--ink);
+      color: var(--bg);
+      font-size: 11px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-family: var(--sans);
+      font-weight: 400;
+      transition: background .2s, color .2s;
+    }
+    .btn-primary:hover { background: var(--accent); }
 
-  /* Markets */
-  .badges{ display:flex; gap:10px; flex-wrap:wrap; margin-top:20px; }
-  .badge{
-    font-family:var(--font-mono); font-size:13px; border:1px solid var(--line);
-    border-radius:999px; padding:6px 14px; display:inline-flex; align-items:center; gap:7px;
-    background:#fff;
-  }
-  .dot{ width:7px; height:7px; border-radius:50%; background:var(--indexed); display:inline-block; }
-  section p.lead{ max-width:60ch; color:var(--ink-soft); font-size:16px; }
+    .btn-ghost {
+      font-size: 11px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ink-mid);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: color .2s;
+    }
+    .btn-ghost:hover { color: var(--ink); }
+    .btn-ghost::after {
+      content: '↓';
+      font-size: 13px;
+    }
 
-  /* Log / terminal */
-  .terminal{
-    background:var(--ink); color:var(--paper); border-radius:10px; overflow:hidden;
-    max-width:680px;
-  }
-  .terminal-bar{
-    display:flex; gap:6px; padding:12px 16px; border-bottom:1px solid rgba(255,255,255,.1);
-  }
-  .terminal-bar span{ width:9px; height:9px; border-radius:50%; background:rgba(255,255,255,.25); }
-  .terminal-body{ padding:20px 22px 24px; font-family:var(--font-mono); font-size:13.5px; }
-  .terminal-body div{ margin-bottom:11px; display:flex; gap:10px; }
-  .terminal-body div:last-child{ margin-bottom:0; }
-  .check{ color:var(--indexed); flex-shrink:0; }
-  .cursor{
-    display:inline-block; width:7px; height:14px; background:var(--indexed);
-    margin-left:2px; vertical-align:middle;
-  }
+    .hero-right {
+      position: relative;
+      align-self: stretch;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
 
-  /* Contact */
-  .contact-list{ list-style:none; padding:0; margin:20px 0 0; font-family:var(--font-mono); font-size:15px; }
-  .contact-list li{ padding:10px 0; border-bottom:1px solid var(--line); display:flex; gap:14px; }
-  .contact-list li span:first-child{ color:var(--ink-soft); min-width:90px; }
-  .email-row{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
-  .copy-email{
-    font-family:var(--font-mono); font-size:15px; color:var(--link);
-    background:none; border:none; padding:0; cursor:pointer; text-decoration:underline;
-    text-underline-offset:3px;
-  }
-  .copy-email.is-copied{ color:var(--indexed); }
-  .copy-email-inline{ font-weight:600; font-size:inherit; }
-  .copy-hint{ font-size:12px; color:var(--ink-soft); }
+    .hero-photo-wrap {
+      position: relative;
+      width: 100%;
+      max-width: 380px;
+      margin-left: auto;
+    }
+    .hero-photo-wrap img {
+      width: 100%;
+      display: block;
+      filter: grayscale(15%);
+      mix-blend-mode: multiply;
+    }
+    .hero-photo-caption {
+      position: absolute;
+      bottom: -28px;
+      left: 0;
+      font-size: 10px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+    }
 
-  footer{
-    padding:32px 0 64px; font-family:var(--font-mono); font-size:13px; color:var(--ink-soft);
-  }
+    .hero-stats {
+      display: flex;
+      gap: 40px;
+      margin-top: 56px;
+      padding-top: 32px;
+      border-top: 1px solid var(--rule);
+    }
+    .stat-item {}
+    .stat-number {
+      font-family: var(--serif);
+      font-size: 36px;
+      font-weight: 300;
+      line-height: 1;
+      color: var(--ink);
+      display: block;
+    }
+    .stat-label {
+      font-size: 10px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      display: block;
+      margin-top: 4px;
+    }
 
-  /* About */
-  .about-grid{ display:grid; grid-template-columns:240px 1fr; gap:36px; align-items:start; }
-  .about-card{
-    border:1px solid var(--line); border-radius:10px; background:#fff; padding:14px;
-    text-align:center;
-  }
-  .about-photo{
-    width:100%; height:auto; border-radius:7px; display:block; margin:0 0 14px; object-fit:cover;
-  }
-  .about-name{ font-family:var(--font-display); font-weight:600; font-size:16px; margin:0 0 4px; }
-  .about-role{ font-size:13px; color:var(--ink-soft); margin:0; }
-  .stats-row{ display:flex; gap:32px; flex-wrap:wrap; margin-top:28px; }
-  .stat{ display:flex; flex-direction:column; }
-  .stat-num{ font-family:var(--font-display); font-weight:700; font-size:32px; color:var(--link); line-height:1; }
-  .stat-label{ font-family:var(--font-mono); font-size:12.5px; color:var(--ink-soft); margin-top:6px; max-width:14ch; }
+    /* ── SECTION WRAPPER ── */
+    .section {
+      padding: 80px 48px;
+      border-top: 1px solid var(--rule);
+    }
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 60px;
+    }
+    .section-num {
+      font-family: var(--serif);
+      font-size: 11px;
+      color: var(--ink-light);
+      letter-spacing: .1em;
+    }
+    .section-title {
+      font-family: var(--serif);
+      font-size: clamp(28px, 3.5vw, 44px);
+      font-weight: 300;
+      line-height: 1.15;
+      letter-spacing: -.01em;
+    }
+    .section-title em { font-style: italic; color: var(--accent); }
 
-  /* Process */
-  .process-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px; }
-  .process-step{ border-top:2px solid var(--line); padding-top:16px; }
-  .step-num{ font-family:var(--font-mono); font-size:13px; color:var(--link); font-weight:600; }
-  .process-step h3{ font-family:var(--font-display); font-size:16.5px; margin:10px 0 8px; }
-  .process-step p{ margin:0; color:var(--ink-soft); font-size:14px; }
+    /* ── PROBLEM SECTION ── */
+    .problems-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--rule);
+      margin-top: 48px;
+    }
+    .problem-item {
+      background: var(--bg);
+      padding: 40px 36px;
+    }
+    .problem-tag {
+      font-size: 9px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+      display: block;
+    }
+    .problem-title {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    .problem-body {
+      font-size: 13px;
+      color: var(--ink-mid);
+      line-height: 1.65;
+    }
+    .problems-note {
+      margin-top: 40px;
+      padding: 28px 36px;
+      border-left: 2px solid var(--accent-lt);
+      font-family: var(--serif);
+      font-size: 18px;
+      font-style: italic;
+      color: var(--ink-mid);
+      line-height: 1.5;
+    }
 
-  /* FAQ */
-  .faq-list{ display:flex; flex-direction:column; max-width:720px; }
-  .faq-list details{ border-bottom:1px solid var(--line); padding:18px 0; }
-  .faq-list summary{
-    cursor:pointer; font-family:var(--font-display); font-weight:600; font-size:16px;
-    list-style:none; display:flex; justify-content:space-between; align-items:center; gap:16px;
-  }
-  .faq-list summary::-webkit-details-marker{ display:none; }
-  .faq-list summary::after{
-    content:'+'; font-family:var(--font-mono); color:var(--ink-soft); flex-shrink:0; font-size:18px;
-  }
-  .faq-list details[open] summary::after{ content:'\2212'; }
-  .faq-list details p{ margin:12px 0 0; color:var(--ink-soft); font-size:14.5px; line-height:1.6; }
+    /* ── LOG ── */
+    .log-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--rule);
+      border: 1px solid var(--rule);
+    }
+    .log-item {
+      display: flex;
+      gap: 16px;
+      align-items: baseline;
+      padding: 22px 28px;
+      background: var(--bg);
+    }
+    .log-check {
+      font-size: 11px;
+      color: var(--accent);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .log-text {
+      font-size: 13px;
+      color: var(--ink-mid);
+      line-height: 1.6;
+    }
 
-  @media (max-width:640px){
-    .about-grid{ grid-template-columns:1fr; }
-    .about-card{ max-width:200px; }
-  }
+    /* ── FAQ ── */
+    .faq-list { border: 1px solid var(--rule); }
+    .faq-item {
+      border-bottom: 1px solid var(--rule);
+    }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 22px 28px;
+      cursor: pointer;
+      list-style: none;
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--ink);
+      background: var(--bg-warm);
+      transition: background .2s;
+      gap: 20px;
+    }
+    .faq-q::-webkit-details-marker { display: none; }
+    .faq-item[open] .faq-q { background: var(--bg); }
+    .faq-icon {
+      font-size: 20px;
+      font-weight: 300;
+      color: var(--ink-light);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-item[open] .faq-icon { transform: rotate(45deg); }
+    .faq-a {
+      padding: 20px 28px 28px;
+      font-size: 14px;
+      color: var(--ink-mid);
+      line-height: 1.7;
+      background: var(--bg);
+    }
 
-  /* Problem bridge text */
-  .problem-bridge{ margin-top:28px; }
+    /* ── CONTACT ── */
+    #contact { background: var(--ink); color: var(--bg); }
+    #contact .section-num { color: rgba(244,240,232,.3); }
+    .contact-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .contact-title {
+      font-family: var(--serif);
+      font-size: clamp(32px, 4vw, 56px);
+      font-weight: 300;
+      line-height: 1.1;
+      letter-spacing: -.01em;
+      color: var(--bg);
+      margin-bottom: 20px;
+    }
+    .contact-sub {
+      font-size: 14px;
+      color: rgba(244,240,232,.6);
+      line-height: 1.6;
+    }
+    #contact .btn-primary {
+      background: var(--bg);
+      color: var(--ink);
+    }
+    #contact .btn-primary:hover { background: var(--accent-lt); }
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      padding-top: 8px;
+    }
+    .contact-link-group {}
+    .contact-link-group .label {
+      color: rgba(244,240,232,.4);
+      display: block;
+      margin-bottom: 6px;
+    }
+    .contact-link {
+      font-size: 15px;
+      color: var(--bg);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(244,240,232,.2);
+      padding-bottom: 2px;
+      transition: border-color .2s;
+    }
+    .contact-link:hover { border-color: var(--bg); }
 
-  /* CTA banner */
-  .cta-banner{
-    border:1px solid var(--line); border-left:4px solid var(--link); border-radius:10px;
-    background:#fff; padding:30px 32px; display:flex; align-items:center; justify-content:space-between;
-    gap:24px; flex-wrap:wrap;
-  }
-  .cta-banner-text-wrap{ flex:1; min-width:240px; }
-  .cta-banner-title{ font-family:var(--font-display); font-weight:600; font-size:19px; margin:0 0 8px; }
-  .cta-banner-text{ color:var(--ink-soft); margin:0; max-width:46ch; font-size:14.5px; }
+    /* ── FOOTER ── */
+    .footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 48px;
+      background: var(--ink);
+      color: rgba(244,240,232,.35);
+      font-size: 11px;
+      letter-spacing: .1em;
+      border-top: 1px solid rgba(244,240,232,.1);
+    }
+    .footer-top {
+      color: rgba(244,240,232,.4);
+      text-decoration: none;
+      font-size: 16px;
+      transition: color .2s;
+    }
+    .footer-top:hover { color: var(--bg); }
 
-  /* Reveal animation */
-  @media (prefers-reduced-motion: no-preference){
-    .reveal{ opacity:0; transform:translateY(14px); transition:opacity .6s ease, transform .6s ease; }
-    .reveal.is-visible{ opacity:1; transform:none; }
-    @keyframes blink{ 50%{opacity:0;} }
-    .cursor{ animation:blink 1s step-end infinite; }
-  }
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { padding: 16px 24px; }
+      .nav-links { gap: 20px; }
+      .hero { grid-template-columns: 1fr; padding: 120px 24px 60px; min-height: auto; }
+      .hero-right { display: none; }
+      .section { padding: 60px 24px; }
+      .problems-grid,
+      .services-grid { grid-template-columns: 1fr; }
+      .process-list { grid-template-columns: 1fr 1fr; }
+      .log-list { grid-template-columns: 1fr; }
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .contact-inner { grid-template-columns: 1fr; gap: 48px; }
+      .footer { padding: 20px 24px; }
+    }
+    @media (max-width: 600px) {
+      .nav-links li:not(:last-child) { display: none; }
+      .process-list { grid-template-columns: 1fr; }
+      .hero-stats { gap: 24px; }
+    }
 
-  @media (max-width:560px){
-    .cta-row{ flex-direction:column; }
-    .btn{ text-align:center; }
-  }
+    /* ── SERVICES ── */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--rule);
+      border: 1px solid var(--rule);
+    }
+    .service-item {
+      background: var(--bg);
+      padding: 36px 32px;
+      transition: background .2s;
+    }
+    .service-item:hover { background: var(--bg-warm); }
+    .service-code {
+      font-size: 9px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 14px;
+    }
+    .service-title {
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 1.25;
+      margin-bottom: 10px;
+    }
+    .service-body {
+      font-size: 13px;
+      color: var(--ink-mid);
+      line-height: 1.65;
+    }
 
-  @media (max-width:400px){
-    .serp-card{ padding:22px 20px 20px; }
-  }
-</style>
+    /* ── PROCESS ── */
+    .section-dark { background: var(--bg-warm); }
+    .process-list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--rule);
+      border: 1px solid var(--rule);
+    }
+    .process-item {
+      background: var(--bg-warm);
+      padding: 36px 28px;
+    }
+    .process-num {
+      font-family: var(--serif);
+      font-size: 48px;
+      font-weight: 300;
+      color: var(--rule);
+      line-height: 1;
+      display: block;
+      margin-bottom: 20px;
+    }
+    .process-title {
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+    .process-body {
+      font-size: 13px;
+      color: var(--ink-mid);
+      line-height: 1.65;
+    }
+
+    /* ── STACK ── */
+    .stack-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 48px;
+    }
+    .stack-tag {
+      font-size: 12px;
+      letter-spacing: .06em;
+      padding: 8px 16px;
+      border: 1px solid var(--rule);
+      color: var(--ink-mid);
+      background: var(--bg);
+      transition: border-color .2s, color .2s;
+    }
+    .stack-tag:hover { border-color: var(--ink-mid); color: var(--ink); }
+    .markets-row {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      padding-top: 32px;
+      border-top: 1px solid var(--rule);
+    }
+    .market-tags { display: flex; gap: 16px; }
+    .market-tag {
+      font-size: 12px;
+      letter-spacing: .08em;
+      color: var(--ink-mid);
+    }
+
+    /* ── ABOUT ── */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .about-body {
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--ink-mid);
+    }
+    .about-body p + p { margin-top: 20px; }
+    .about-meta {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--rule);
+      border: 1px solid var(--rule);
+    }
+    .about-meta-item {
+      background: var(--bg);
+      padding: 28px 24px;
+    }
+    .about-meta-num {
+      font-family: var(--serif);
+      font-size: 40px;
+      font-weight: 300;
+      line-height: 1;
+      color: var(--ink);
+      display: block;
+    }
+    .about-meta-label {
+      font-size: 10px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      display: block;
+      margin-top: 6px;
+    }
+  </style>
 </head>
 <body>
 
-<header class="wrap">
-  <div class="logo"><a href="#top">yuliia.dev</a></div>
-  <div class="lang-toggle" role="group" aria-label="Language / Мова">
-    <button type="button" data-set-lang="uk" class="is-active">UA</button>
-    <button type="button" data-set-lang="en">EN</button>
+<!-- NAV -->
+<nav id="nav">
+  <a href="#top" class="nav-logo">Yuliia Kvitchasta</a>
+  <ul class="nav-links">
+    <li><a href="#about"><span data-lang="uk">Про мене</span><span data-lang="en">About</span></a></li>
+    <li><a href="#services"><span data-lang="uk">Послуги</span><span data-lang="en">Services</span></a></li>
+    <li><a href="#log"><span data-lang="uk">Лог</span><span data-lang="en">Log</span></a></li>
+    <li><a href="#contact"><span data-lang="uk">Контакт</span><span data-lang="en">Contact</span></a></li>
+    <li class="lang-toggle">
+      <button class="lang-btn active" data-lang-switch="uk">UA</button>
+      <button class="lang-btn" data-lang-switch="en">EN</button>
+    </li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="top" class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">
+      <span class="label" data-lang="uk">SEO · Digital Marketing · UA–EU</span>
+      <span class="label" data-lang="en">SEO · Digital Marketing · UA–EU</span>
+    </div>
+
+    <h1 class="hero-headline">
+      <span data-lang="uk">Допомагаю бізнесу бути<br><em>видимим</em> у пошуку</span>
+      <span data-lang="en">I help businesses get<br><em>found</em> in search</span>
+    </h1>
+
+    <p class="hero-sub">
+      <span data-lang="uk">Від технічних аудитів і структурованих даних до мультимовного контенту й рекламних кампаній. Ринки України та Європи.</span>
+      <span data-lang="en">From technical audits and structured data to multilingual content and paid campaigns. Ukrainian and European markets.</span>
+    </p>
+
+    <div class="hero-cta">
+      <a href="mailto:yuliiakvitchasta@gmail.com?subject=SEO%20аудит" class="btn-primary">
+        <span data-lang="uk">Написати</span>
+        <span data-lang="en">Get in touch</span>
+      </a>
+      <a href="#services" class="btn-ghost">
+        <span data-lang="uk">Послуги</span>
+        <span data-lang="en">Services</span>
+      </a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span class="stat-number">5+</span>
+        <span class="stat-label" data-lang="uk">років досвіду</span>
+        <span class="stat-label" data-lang="en">years exp.</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">4</span>
+        <span class="stat-label" data-lang="uk">мови контенту</span>
+        <span class="stat-label" data-lang="en">content languages</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">9+</span>
+        <span class="stat-label" data-lang="uk">напрямків послуг</span>
+        <span class="stat-label" data-lang="en">service areas</span>
+      </div>
+    </div>
   </div>
-</header>
 
-<main>
-  <section class="hero wrap" id="top" style="border-top:none;">
-    <p class="breadcrumb">yuliia.dev › seo-and-marketing</p>
-
-    <div class="serp-card">
-      <p class="serp-title" data-i18n="uk">Юлія - SEO та digital-маркетинг</p>
-      <p class="serp-title" data-i18n="en">Yuliia - SEO &amp; Digital Marketing</p>
-      <p class="serp-desc" data-i18n="uk">Технічне SEO, контент і платна реклама для брендів в Україні та Європі.</p>
-      <p class="serp-desc" data-i18n="en">Technical SEO, content, and paid campaigns for brands in Ukraine and Europe.</p>
+  <div class="hero-right">
+    <div class="hero-photo-wrap">
+      <img src="yuliia-photo.jpg" alt="Yuliia Kvitchasta">
+      <span class="hero-photo-caption">Yuliia Kvitchasta / SEO & Digital Marketing</span>
     </div>
+  </div>
+</section>
 
-    <h1 class="hero-headline" data-i18n="uk">Допомагаю бізнесу&nbsp;бути видимим у&nbsp;пошуку</h1>
-    <h1 class="hero-headline" data-i18n="en">I help businesses get found in search</h1>
 
-    <p class="hero-sub" data-i18n="uk">Від технічних аудитів і структурованих даних до мультимовного контенту й рекламних кампаній у Meta Ads - працюю з ринками України та Європи.</p>
-    <p class="hero-sub" data-i18n="en">From technical audits and structured data to multilingual content and Meta Ads campaigns с working across Ukrainian and European markets.</p>
-
-    <div class="cta-row">
-      <a class="btn btn-primary" href="#contact" data-i18n="uk">Написати</a>
-      <a class="btn btn-primary" href="#contact" data-i18n="en">Get in touch</a>
-      <a class="btn btn-secondary" href="#services" data-i18n="uk">Переглянути послуги</a>
-      <a class="btn btn-secondary" href="#services" data-i18n="en">View services</a>
+<!-- PROBLEM -->
+<section id="problem" class="section">
+  <div class="section-header">
+    <span class="section-num">01</span>
+    <h2 class="section-title">
+      <span data-lang="uk">Знайома<br><em>ситуація?</em></span>
+      <span data-lang="en">Sound<br><em>familiar?</em></span>
+    </h2>
+  </div>
+  <div class="problems-grid">
+    <div class="problem-item">
+      <span class="problem-tag" data-lang="uk">Видимість</span>
+      <span class="problem-tag" data-lang="en">Visibility</span>
+      <h3 class="problem-title">
+        <span data-lang="uk">Сайт є — клієнтів немає</span>
+        <span data-lang="en">Website exists — clients don't come</span>
+      </h3>
+      <p class="problem-body">
+        <span data-lang="uk">Клієнти шукають ваші послуги в Google, а знаходять конкурентів — ви десь на 5–10 сторінці видачі.</span>
+        <span data-lang="en">Clients search for your services on Google but find competitors — you're buried on page 5–10.</span>
+      </p>
     </div>
-  </section>
-
-  <section class="wrap reveal" id="problem">
-    <p class="eyebrow" data-i18n="uk">Знайома ситуація?</p>
-    <p class="eyebrow" data-i18n="en">Sound familiar?</p>
-    <h2 data-i18n="uk">Сайт є - клієнтів немає</h2>
-    <h2 data-i18n="en">You have a website - but no clients</h2>
-
-    <div class="services-grid">
-      <div class="service-card">
-        <svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M5 20c3-6 9-10 15-10s12 4 15 10c-3 6-9 10-15 10S8 26 5 20Z"/>
-          <circle cx="20" cy="20" r="4.5"/>
-          <line x1="6" y1="34" x2="34" y2="6"/>
-        </svg>
-        <h3 data-i18n="uk">Вас не видно в пошуку</h3>
-        <h3 data-i18n="en">You're invisible in search</h3>
-        <p data-i18n="uk">Клієнти шукають ваші послуги в Google, а знаходять конкурентів - ви десь на 5–10 сторінці видачі.</p>
-        <p data-i18n="en">Clients search for your services on Google but find competitors instead - you're somewhere on page 5–10.</p>
-      </div>
-
-      <div class="service-card">
-        <svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="20" cy="15" r="10"/>
-          <line x1="20" y1="10" x2="20" y2="20"/>
-          <path d="M20 33c-2.5 0-4-2-4-4s4-7 4-7 4 5 4 7-1.5 4-4 4Z"/>
-        </svg>
-        <h3 data-i18n="uk">Реклама не окупається</h3>
-        <h3 data-i18n="en">Ads aren't paying off</h3>
-        <p data-i18n="uk">Бюджет на Google Ads чи Meta витрачається, а заявок не прибавляється - трафік просто не конвертується.</p>
-        <p data-i18n="en">Budget goes into Google Ads or Meta, but leads don't grow - traffic just isn't converting.</p>
-      </div>
-
-      <div class="service-card">
-        <svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M6 10h22a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H17l-6 5v-5H9a3 3 0 0 1-3-3V13a3 3 0 0 1 3-3Z"/>
-          <path d="M28 6l1.2 2.8L32 10l-2.8 1.2L28 14l-1.2-2.8L24 10l2.8-1.2Z" fill="currentColor" stroke="none"/>
-        </svg>
-        <h3 data-i18n="uk">AI-пошук вас обходить</h3>
-        <h3 data-i18n="en">AI search skips you</h3>
-        <p data-i18n="uk">Дедалі більше людей шукають голосом і через AI-асистентів - а сайт до цього технічно не готовий.</p>
-        <p data-i18n="en">More people search by voice and through AI assistants - and your site isn't technically ready for that.</p>
-      </div>
+    <div class="problem-item">
+      <span class="problem-tag" data-lang="uk">Реклама</span>
+      <span class="problem-tag" data-lang="en">Paid ads</span>
+      <h3 class="problem-title">
+        <span data-lang="uk">Бюджет іде — заявок немає</span>
+        <span data-lang="en">Budget drains — leads don't come</span>
+      </h3>
+      <p class="problem-body">
+        <span data-lang="uk">Бюджет на Google Ads чи Meta витрачається, а заявок не прибавляється — трафік просто не конвертується.</span>
+        <span data-lang="en">Budget flows into Google Ads or Meta, but leads don't grow — traffic isn't converting.</span>
+      </p>
     </div>
+    <div class="problem-item">
+      <span class="problem-tag" data-lang="uk">AI-пошук</span>
+      <span class="problem-tag" data-lang="en">AI search</span>
+      <h3 class="problem-title">
+        <span data-lang="uk">AI-пошук вас обходить</span>
+        <span data-lang="en">AI search skips you</span>
+      </h3>
+      <p class="problem-body">
+        <span data-lang="uk">Дедалі більше людей шукають через AI-асистентів — а сайт технічно до цього не готовий.</span>
+        <span data-lang="en">More people search via AI assistants — and your site isn't technically ready for that shift.</span>
+      </p>
+    </div>
+  </div>
+  <p class="problems-note">
+    <span data-lang="uk">Найчастіше причина — не в бюджеті чи везінні, а в технічних деталях, контенті й налаштуваннях, які можна виправити.</span>
+    <span data-lang="en">Most often the reason isn't budget or luck — it's technical details, content, and settings that can be fixed.</span>
+  </p>
+</section>
 
-    <p class="lead problem-bridge" data-i18n="uk">Найчастіше причина - не в бюджеті чи везінні, а в технічних деталях, контенті й налаштуваннях, які можна виправити.</p>
-    <p class="lead problem-bridge" data-i18n="en">Most often, the reason isn't budget or luck - it's technical details, content, and settings that can be fixed.</p>
-  </section>
-
-  <section class="wrap reveal" id="about">
-    <div class="about-grid">
-      <div class="about-card">
-        <picture>
-          <source srcset="yuliia-photo.webp" type="image/webp">
-          <img class="about-photo" src="yuliia-photo.jpg" alt="Yuliia Kvitchasta" width="640" height="800" loading="lazy">
-        </picture>
-        <p class="about-name">Yuliia Kvitchasta</p>
-        <p class="about-role" data-i18n="uk">SEO та digital-маркетинг</p>
-        <p class="about-role" data-i18n="en">SEO &amp; Digital Marketing</p>
-      </div>
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="section-header">
+    <span class="section-num">02</span>
+    <h2 class="section-title">
+      <span data-lang="uk">Коротко<br><em>про мене</em></span>
+      <span data-lang="en">A bit<br><em>about me</em></span>
+    </h2>
+  </div>
+  <div class="about-grid">
+    <div>
       <div class="about-body">
-        <p class="eyebrow" data-i18n="uk">Про мене</p>
-        <p class="eyebrow" data-i18n="en">About</p>
-        <h2 data-i18n="uk">Коротко про мене</h2>
-        <h2 data-i18n="en">A bit about me</h2>
-        <p class="lead" data-i18n="uk">Працюю в SEO та digital-маркетингу 5+ років, фокусуючись на технічній стороні та мультимовних проєктах. Поєдную аудит, контент і платну рекламу в одну стратегію - замість розрізнених послуг від різних підрядників.</p>
-        <p class="lead" data-i18n="en">I've spent 5+ years in SEO and digital marketing, focused on the technical side and multilingual projects. I combine audits, content, and paid ads into one strategy - instead of juggling separate vendors.</p>
-
-        <div class="stats-row">
-          <div class="stat">
-            <span class="stat-num">5+</span>
-            <span class="stat-label" data-i18n="uk">років досвіду</span>
-            <span class="stat-label" data-i18n="en">years of experience</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num">9+</span>
-            <span class="stat-label" data-i18n="uk">напрямків послуг</span>
-            <span class="stat-label" data-i18n="en">service areas</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num">4+</span>
-            <span class="stat-label" data-i18n="uk">мови контенту</span>
-            <span class="stat-label" data-i18n="en">languages</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num">2</span>
-            <span class="stat-label" data-i18n="uk">ринки: UA + EU</span>
-            <span class="stat-label" data-i18n="en">markets: UA + EU</span>
-          </div>
-        </div>
+        <p>
+          <span data-lang="uk">Працюю в SEO та digital-маркетингу 5+ років, фокусуючись на технічній стороні та мультимовних проєктах. Поєдную аудит, контент і платну рекламу в одну стратегію — замість розрізнених послуг від різних підрядників.</span>
+          <span data-lang="en">I've spent 5+ years in SEO and digital marketing, focused on the technical side and multilingual projects. I combine audits, content, and paid ads into one strategy — instead of juggling separate vendors for each.</span>
+        </p>
+        <p>
+          <span data-lang="uk">Підхід — data-driven: аналізую ринок і конкурентів, досліджую попит, будую структуру й стратегію на основі реальних даних і бізнес-цілей.</span>
+          <span data-lang="en">My approach is data-driven: I analyze markets and competitors, research demand, and build structure and strategy from real data and business goals.</span>
+        </p>
+        <p>
+          <span data-lang="uk">Спілкуємось українською, англійською або чеською — як вам зручніше.</span>
+          <span data-lang="en">We can communicate in Ukrainian, English, or Czech — whichever works best for you.</span>
+        </p>
       </div>
     </div>
-  </section>
-
-  <section class="wrap reveal" id="services">
-    <p class="eyebrow" data-i18n="uk">Послуги</p>
-    <p class="eyebrow" data-i18n="en">Services</p>
-    <h2 data-i18n="uk">Чим можу бути корисною</h2>
-    <h2 data-i18n="en">What I can do for you</h2>
-
-    <div class="services-grid">
-      <div class="service-card">
-        <svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <rect x="6" y="5" width="20" height="26" rx="2"/>
-          <line x1="10" y1="12" x2="22" y2="12"/>
-          <line x1="10" y1="17" x2="22" y2="17"/>
-          <line x1="10" y1="22" x2="17" y2="22"/>
-          <circle cx="27" cy="27" r="6"/>
-          <line x1="31.2" y1="31.2" x2="35.5" y2="35.5"/>
-        </svg>
-        <span class="tag">TECH-SEO</span>
-        <h3 data-i18n="uk">Технічний SEO-аудит</h3>
-        <h3 data-i18n="en">Technical SEO Audits</h3>
-        <p data-i18n="uk">Швидкість завантаження, індексація, structured data (Schema.org), hreflang для мультимовних сайтів.</p>
-        <p data-i18n="en">Site speed, indexation, Schema.org structured data, hreflang for multilingual sites.</p>
+    <div class="about-meta">
+      <div class="about-meta-item">
+        <span class="about-meta-num">5+</span>
+        <span class="about-meta-label" data-lang="uk">років досвіду</span>
+        <span class="about-meta-label" data-lang="en">years experience</span>
       </div>
-
-      <div class="service-card">
-        <svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <rect x="7" y="5" width="20" height="26" rx="2"/>
-          <line x1="11" y1="12" x2="23" y2="12"/>
-          <line x1="11" y1="17" x2="23" y2="17"/>
-          <line x1="11" y1="22" x2="19" y2="22"/>
-          <path d="M24 28 L34 18 L37 21 L27 31 L23 32 Z"/>
-        </svg>
-        <span class="tag">CONTENT</span>
-        <h3 data-i18n="uk">Контент-стратегія та копірайтинг</h3>
-        <h3 data-i18n="en">Content Strategy &amp; Copywriting</h3>
-        <p data-i18n="uk">SEO-статті, FAQ-блоки, лендинги - контент, який ранжується і добре читається.</p>
-        <p data-i18n="en">SEO articles, FAQ blocks, landing pages - content that ranks and reads well.</p>
+      <div class="about-meta-item">
+        <span class="about-meta-num">9+</span>
+        <span class="about-meta-label" data-lang="uk">напрямків послуг</span>
+        <span class="about-meta-label" data-lang="en">service areas</span>
       </div>
-
-      <div class="service-card">
-        <svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="17" cy="21" r="13"/>
-          <circle cx="17" cy="21" r="7.5"/>
-          <circle cx="17" cy="21" r="2.2" fill="currentColor" stroke="none"/>
-          <line x1="25.5" y1="12.5" x2="35" y2="3"/>
-          <path d="M28.5 3 L35 3 L35 9.5"/>
-        </svg>
-        <span class="tag">PAID-ADS</span>
-        <h3 data-i18n="uk">Таргетована реклама</h3>
-        <h3 data-i18n="en">Paid Social Campaigns</h3>
-        <p data-i18n="uk">Кампанії у Meta Ads (Facebook/Instagram): від охоплення до конверсій, по етапах воронки.</p>
-        <p data-i18n="en">Meta Ads (Facebook/Instagram): from awareness to conversions, mapped to funnel stage.</p>
+      <div class="about-meta-item">
+        <span class="about-meta-num">4</span>
+        <span class="about-meta-label" data-lang="uk">мови контенту</span>
+        <span class="about-meta-label" data-lang="en">content languages</span>
       </div>
-
-      <div class="service-card">
-        <svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <line x1="6" y1="33" x2="34" y2="33"/>
-          <rect x="9" y="23" width="5" height="10"/>
-          <rect x="18" y="17" width="5" height="16"/>
-          <rect x="27" y="10" width="5" height="23"/>
-          <circle cx="29.5" cy="6.5" r="2" fill="currentColor" stroke="none"/>
-        </svg>
-        <span class="tag">ANALYTICS</span>
-        <h3 data-i18n="uk">Аналітика та трекінг</h3>
-        <h3 data-i18n="en">Analytics &amp; Tracking</h3>
-        <p data-i18n="uk">Налаштування GA4, конверсій Google Ads, виправлення розривів через consent-менеджери та ITP.</p>
-        <p data-i18n="en">GA4 setup, Google Ads conversion tracking, fixing gaps caused by consent tools and ITP.</p>
-      </div>
-
-      <div class="service-card">
-        <svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <rect x="4" y="14" width="17" height="10" rx="5" transform="rotate(-25 12.5 19)"/>
-          <rect x="19" y="16" width="17" height="10" rx="5" transform="rotate(-25 27.5 21)"/>
-        </svg>
-        <span class="tag">LINKS</span>
-        <h3 data-i18n="uk">Лінкбілдинг</h3>
-        <h3 data-i18n="en">Link Building</h3>
-        <p data-i18n="uk">Органічні донор-статті з природним входженням посилань - без спаму й відвертої реклами.</p>
-        <p data-i18n="en">Organic donor articles with natural anchor placement - no spam, no obvious promo.</p>
-      </div>
-
-      <div class="service-card">
-        <svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="20" cy="20" r="14"/>
-          <ellipse cx="20" cy="20" rx="6" ry="14"/>
-          <line x1="6" y1="20" x2="34" y2="20"/>
-          <line x1="8.3" y1="13" x2="31.7" y2="13"/>
-          <line x1="8.3" y1="27" x2="31.7" y2="27"/>
-        </svg>
-        <span class="tag">I18N</span>
-        <h3 data-i18n="uk">Мультимовна локалізація</h3>
-        <h3 data-i18n="en">Multilingual Localization</h3>
-        <p data-i18n="uk">Адаптація контенту під кілька ринків: переклад, hreflang, мовні нюанси.</p>
-        <p data-i18n="en">Adapting content for multiple markets: translation, hreflang, local nuance.</p>
-      </div>
-
-      <div class="service-card">
-        <svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="16" cy="16" r="10"/>
-          <line x1="23" y1="23" x2="27" y2="27"/>
-          <path d="M24 24 L36 28 L31 31 L28 36 Z" fill="currentColor" stroke="none"/>
-          <line x1="35" y1="20" x2="38" y2="18"/>
-          <line x1="37" y1="25" x2="39" y2="25"/>
-        </svg>
-        <span class="tag">GOOGLE-ADS</span>
-        <h3 data-i18n="uk">Реклама в Google Ads</h3>
-        <h3 data-i18n="en">Google Ads Campaigns</h3>
-        <p data-i18n="uk">Пошукові кампанії, ремаркетинг і оптимізація ставок - від налаштування до контролю результату.</p>
-        <p data-i18n="en">Search campaigns, remarketing, and bid optimization - from setup to ongoing management.</p>
-      </div>
-
-      <div class="service-card">
-        <svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <rect x="4" y="6" width="32" height="26" rx="3"/>
-          <line x1="4" y1="13" x2="36" y2="13"/>
-          <circle cx="9" cy="9.5" r="1" fill="currentColor" stroke="none"/>
-          <circle cx="13" cy="9.5" r="1" fill="currentColor" stroke="none"/>
-          <circle cx="17" cy="9.5" r="1" fill="currentColor" stroke="none"/>
-          <rect x="9" y="18" width="9" height="9" rx="1.5"/>
-          <line x1="22" y1="19" x2="31" y2="19"/>
-          <line x1="22" y1="23" x2="31" y2="23"/>
-          <line x1="22" y1="27" x2="27" y2="27"/>
-        </svg>
-        <span class="tag">WORDPRESS</span>
-        <h3 data-i18n="uk">Створення сайтів на WordPress</h3>
-        <h3 data-i18n="en">WordPress Website Development</h3>
-        <p data-i18n="uk">Розробка та налаштування сайтів - швидких, адаптивних і готових до SEO з першого дня.</p>
-        <p data-i18n="en">Building and configuring sites - fast, responsive, and SEO-ready from day one.</p>
-      </div>
-
-      <div class="service-card">
-        <svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="15" cy="20" r="11"/>
-          <circle cx="25" cy="20" r="11"/>
-        </svg>
-        <span class="tag">POSITIONING</span>
-        <h3 data-i18n="uk">Конкурентний аналіз і позиціонування</h3>
-        <h3 data-i18n="en">Competitive Analysis &amp; Positioning</h3>
-        <p data-i18n="uk">Аналіз конкурентів і формування унікального позиціонування бренду - наратив, що відрізняє вас на ринку.</p>
-        <p data-i18n="en">Competitor analysis and brand positioning - a narrative that sets you apart in a crowded market.</p>
+      <div class="about-meta-item">
+        <span class="about-meta-num">2</span>
+        <span class="about-meta-label" data-lang="uk">ринки: UA + EU</span>
+        <span class="about-meta-label" data-lang="en">markets: UA + EU</span>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="wrap reveal" id="process">
-    <p class="eyebrow" data-i18n="uk">Як ми працюємо</p>
-    <p class="eyebrow" data-i18n="en">Process</p>
-    <h2 data-i18n="uk">Чотири кроки до результату</h2>
-    <h2 data-i18n="en">Four steps to results</h2>
+<!-- SERVICES -->
+<section id="services" class="section">
+  <div class="section-header">
+    <span class="section-num">03</span>
+    <h2 class="section-title">
+      <span data-lang="uk">Чим можу<br><em>бути корисною</em></span>
+      <span data-lang="en">What I can<br><em>do for you</em></span>
+    </h2>
+  </div>
+  <div class="services-grid">
 
-    <div class="process-grid">
-      <div class="process-step">
-        <span class="step-num">01</span>
-        <h3 data-i18n="uk">Заявка</h3>
-        <h3 data-i18n="en">Get in touch</h3>
-        <p data-i18n="uk">Розповідаєте про бізнес і цілі - відповідаю протягом 1–2 днів.</p>
-        <p data-i18n="en">Tell me about your business and goals - I reply within 1–2 days.</p>
+    <article class="service-item">
+      <span class="service-code">TECH-SEO</span>
+      <h3 class="service-title">
+        <span data-lang="uk">Технічний SEO-аудит</span>
+        <span data-lang="en">Technical SEO Audits</span>
+      </h3>
+      <p class="service-body">
+        <span data-lang="uk">Швидкість завантаження, індексація, Schema.org, hreflang для мультимовних сайтів.</span>
+        <span data-lang="en">Site speed, indexation, Schema.org structured data, hreflang for multilingual sites.</span>
+      </p>
+    </article>
+
+    <article class="service-item">
+      <span class="service-code">CONTENT</span>
+      <h3 class="service-title">
+        <span data-lang="uk">Контент-стратегія та копірайтинг</span>
+        <span data-lang="en">Content Strategy & Copywriting</span>
+      </h3>
+      <p class="service-body">
+        <span data-lang="uk">SEO-статті, FAQ-блоки, лендинги — контент, який ранжується і добре читається.</span>
+        <span data-lang="en">SEO articles, FAQ blocks, landing pages — content that ranks and reads well.</span>
+      </p>
+    </article>
+
+    <article class="service-item">
+      <span class="service-code">PAID-ADS</span>
+      <h3 class="service-title">
+        <span data-lang="uk">Таргетована реклама</span>
+        <span data-lang="en">Paid Social Campaigns</span>
+      </h3>
+      <p class="service-body">
+        <span data-lang="uk">Кампанії у Meta Ads (Facebook/Instagram): від охоплення до конверсій, по етапах воронки.</span>
+        <span data-lang="en">Meta Ads (Facebook/Instagram): from awareness to conversions, mapped to funnel stage.</span>
+      </p>
+    </article>
+
+    <article class="service-item">
+      <span class="service-code">ANALYTICS</span>
+      <h3 class="service-title">
+        <span data-lang="uk">Аналітика та трекінг</span>
+        <span data-lang="en">Analytics & Tracking</span>
+      </h3>
+      <p class="service-body">
+        <span data-lang="uk">Налаштування GA4, конверсій Google Ads, виправлення розривів через consent-менеджери та ITP.</span>
+        <span data-lang="en">GA4 setup, Google Ads conversions, fixing gaps from consent tools and ITP.</span>
+      </p>
+    </article>
+
+    <article class="service-item">
+      <span class="service-code">LINKS</span>
+      <h3 class="service-title">
+        <span data-lang="uk">Лінкбілдинг</span>
+        <span data-lang="en">Link Building</span>
+      </h3>
+      <p class="service-body">
+        <span data-lang="uk">Органічні донор-статті з природним входженням посилань — без спаму й відвертої реклами.</span>
+        <span data-lang="en">Organic donor articles with natural anchor placement — no spam, no obvious promo.</span>
+      </p>
+    </article>
+
+    <article class="service-item">
+      <span class="service-code">I18N</span>
+      <h3 class="service-title">
+        <span data-lang="uk">Мультимовна локалізація</span>
+        <span data-lang="en">Multilingual Localization</span>
+      </h3>
+      <p class="service-body">
+        <span data-lang="uk">Адаптація контенту під кілька ринків: переклад, hreflang, мовні нюанси.</span>
+        <span data-lang="en">Adapting content for multiple markets: translation, hreflang, local nuance.</span>
+      </p>
+    </article>
+
+    <article class="service-item">
+      <span class="service-code">GOOGLE-ADS</span>
+      <h3 class="service-title">
+        <span data-lang="uk">Реклама в Google Ads</span>
+        <span data-lang="en">Google Ads Campaigns</span>
+      </h3>
+      <p class="service-body">
+        <span data-lang="uk">Пошукові кампанії, ремаркетинг і оптимізація ставок — від налаштування до контролю результату.</span>
+        <span data-lang="en">Search campaigns, remarketing, and bid optimization — from setup to ongoing management.</span>
+      </p>
+    </article>
+
+    <article class="service-item">
+      <span class="service-code">WORDPRESS</span>
+      <h3 class="service-title">
+        <span data-lang="uk">Сайти на WordPress</span>
+        <span data-lang="en">WordPress Development</span>
+      </h3>
+      <p class="service-body">
+        <span data-lang="uk">Розробка та налаштування сайтів — швидких, адаптивних і готових до SEO з першого дня.</span>
+        <span data-lang="en">Building and configuring sites — fast, responsive, and SEO-ready from day one.</span>
+      </p>
+    </article>
+
+    <article class="service-item">
+      <span class="service-code">POSITIONING</span>
+      <h3 class="service-title">
+        <span data-lang="uk">Конкурентний аналіз</span>
+        <span data-lang="en">Competitive Analysis</span>
+      </h3>
+      <p class="service-body">
+        <span data-lang="uk">Аналіз конкурентів і формування унікального позиціонування — наратив, що відрізняє вас на ринку.</span>
+        <span data-lang="en">Competitor analysis and brand positioning — a narrative that sets you apart in a crowded market.</span>
+      </p>
+    </article>
+
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" class="section section-dark">
+  <div class="section-header">
+    <span class="section-num">04</span>
+    <h2 class="section-title">
+      <span data-lang="uk">Чотири кроки<br><em>до результату</em></span>
+      <span data-lang="en">Four steps<br><em>to results</em></span>
+    </h2>
+  </div>
+  <div class="process-list">
+    <div class="process-item">
+      <span class="process-num">01</span>
+      <div class="process-content">
+        <h3 class="process-title">
+          <span data-lang="uk">Заявка</span>
+          <span data-lang="en">Get in touch</span>
+        </h3>
+        <p class="process-body">
+          <span data-lang="uk">Розповідаєте про бізнес і цілі — відповідаю протягом 1–2 днів.</span>
+          <span data-lang="en">Tell me about your business and goals — I reply within 1–2 days.</span>
+        </p>
       </div>
-      <div class="process-step">
-        <span class="step-num">02</span>
-        <h3 data-i18n="uk">Аудит</h3>
-        <h3 data-i18n="en">Audit</h3>
-        <p data-i18n="uk">Аналізую сайт, конкурентів і поточний стан SEO та реклами.</p>
-        <p data-i18n="en">I review your site, competitors, and current SEO/ads setup.</p>
-      </div>
-      <div class="process-step">
-        <span class="step-num">03</span>
-        <h3 data-i18n="uk">Стратегія</h3>
-        <h3 data-i18n="en">Strategy</h3>
-        <p data-i18n="uk">Пропоную конкретний план: що, в якому порядку і навіщо.</p>
-        <p data-i18n="en">I propose a concrete plan: what, in what order, and why.</p>
-      </div>
-      <div class="process-step">
-        <span class="step-num">04</span>
-        <h3 data-i18n="uk">Виконання</h3>
-        <h3 data-i18n="en">Execution</h3>
-        <p data-i18n="uk">Впроваджую зміни і звітую про результат зрозумілою мовою.</p>
-        <p data-i18n="en">I implement the changes and report results in plain language.</p>
+    </div>
+    <div class="process-item">
+      <span class="process-num">02</span>
+      <div class="process-content">
+        <h3 class="process-title">
+          <span data-lang="uk">Аудит</span>
+          <span data-lang="en">Audit</span>
+        </h3>
+        <p class="process-body">
+          <span data-lang="uk">Аналізую сайт, конкурентів і поточний стан SEO та реклами.</span>
+          <span data-lang="en">I review your site, competitors, and current SEO/ads setup.</span>
+        </p>
       </div>
     </div>
-  </section>
-
-  <section class="wrap reveal" id="tools">
-    <p class="eyebrow" data-i18n="uk">Стек</p>
-    <p class="eyebrow" data-i18n="en">Stack</p>
-    <h2 data-i18n="uk">З чим працюю</h2>
-    <h2 data-i18n="en">Tools I work with</h2>
-    <div class="badges">
-      <span class="badge">Google Analytics 4</span>
-      <span class="badge">Google Tag Manager</span>
-      <span class="badge">Google Ads</span>
-      <span class="badge">Meta Ads Manager</span>
-      <span class="badge">Ahrefs</span>
-      <span class="badge">WordPress / qTranslate</span>
-      <span class="badge">Schema.org / JSON-LD</span>
-      <span class="badge">HTML</span>
-      <span class="badge">Google Search Console</span>
-    </div>
-  </section>
-
-  <section class="wrap reveal" id="markets">
-    <p class="eyebrow" data-i18n="uk">Ринки</p>
-    <p class="eyebrow" data-i18n="en">Markets</p>
-    <h2 data-i18n="uk">Ринки та мови</h2>
-    <h2 data-i18n="en">Markets &amp; languages</h2>
-    <p class="lead" data-i18n="uk">Працюю з брендами, що виходять на українські та європейські ринки. SEO та контент - українською, англійською, чеською, польською.</p>
-    <p class="lead" data-i18n="en">I work with brands entering Ukrainian and European markets. SEO and content in Ukrainian, English, Czech, and Polish.</p>
-    <div class="badges">
-      <span class="badge"><span class="dot"></span> UA</span>
-      <span class="badge"><span class="dot"></span> EN</span>
-      <span class="badge"><span class="dot"></span> CZ</span>
-      <span class="badge"><span class="dot"></span> PL</span>
-    </div>
-  </section>
-
-  <section class="wrap reveal" id="proof">
-    <p class="eyebrow" data-i18n="uk">Лог</p>
-    <p class="eyebrow" data-i18n="en">Log</p>
-    <h2 data-i18n="uk">Що вже виправлено</h2>
-    <h2 data-i18n="en">Recently fixed</h2>
-
-    <div class="terminal">
-      <div class="terminal-bar"><span></span><span></span><span></span></div>
-      <div class="terminal-body">
-        <div data-i18n="uk"><span class="check">✓</span> відновлено GA4-трекінг покупок, заблокований Safari ITP / Apple Pay</div>
-        <div data-i18n="en"><span class="check">✓</span> GA4 purchase tracking restored after Safari ITP / Apple Pay blocked it</div>
-
-        <div data-i18n="uk"><span class="check">✓</span> розблоковано конверсії Google Ads, які гасив consent-менеджер</div>
-        <div data-i18n="en"><span class="check">✓</span> Google Ads conversions unblocked from a consent-manager conflict</div>
-
-        <div data-i18n="uk"><span class="check">✓</span> виправлено мовні помилки (відмінки, граматичний рід, кальки) на 4 мовних версіях</div>
-        <div data-i18n="en"><span class="check">✓</span> corrected language errors (case forms, grammatical gender, calques) across 4 locales</div>
-
-        <div data-i18n="uk"><span class="check">✓</span> розміщено органічні беклінки на профільних донор-сайтах без спам-патернів</div>
-        <div data-i18n="en"><span class="check">✓</span> placed organic backlinks on relevant donor sites with no spam patterns</div>
-
-        <div data-i18n="uk"><span class="check">✓</span> сформовано унікальне позиціонування бренду проти європейських преміум-конкурентів</div>
-        <div data-i18n="en"><span class="check">✓</span> positioned the brand against premium EU competitors with a distinct narrative</div>
-
-        <div data-i18n="uk"><span class="check">✓</span> автоматизовано конвертацію товарних фото (HEIC/DNG/JPG → WebP) для швидшого завантаження</div>
-        <div data-i18n="en"><span class="check">✓</span> automated product photo conversion (HEIC/DNG/JPG → WebP) for faster page loads</div>
-
-        <div data-i18n="uk"><span class="check">✓</span> розроблено рекламні креативи FB/Instagram (текст + SVG-банери) під етапи воронки</div>
-        <div data-i18n="en"><span class="check">✓</span> created Facebook/Instagram ad creatives (copy + SVG banners) mapped to funnel stages</div>
-
-        <div data-i18n="uk"><span class="check">✓</span> побудовано контент-пайплайн: статті спершу українською, потім локалізація на 4+ мов</div>
-        <div data-i18n="en"><span class="check">✓</span> built a content pipeline: articles written in Ukrainian first, then localized into 4+ languages</div>
-
-        <div data-i18n="uk"><span class="check">✓</span> впроваджено FAQ/HowTo/BreadcrumbList розмітку для блогу Expert Advice<span class="cursor"></span></div>
-        <div data-i18n="en"><span class="check">✓</span> implemented FAQ/HowTo/BreadcrumbList schema across the Expert Advice content hub<span class="cursor"></span></div>
+    <div class="process-item">
+      <span class="process-num">03</span>
+      <div class="process-content">
+        <h3 class="process-title">
+          <span data-lang="uk">Стратегія</span>
+          <span data-lang="en">Strategy</span>
+        </h3>
+        <p class="process-body">
+          <span data-lang="uk">Пропоную конкретний план: що, в якому порядку і навіщо.</span>
+          <span data-lang="en">I propose a concrete plan: what, in what order, and why.</span>
+        </p>
       </div>
     </div>
-  </section>
-
-  <section class="wrap reveal" id="faq">
-    <p class="eyebrow" data-i18n="uk">Питання</p>
-    <p class="eyebrow" data-i18n="en">FAQ</p>
-    <h2 data-i18n="uk">Часті запитання</h2>
-    <h2 data-i18n="en">Frequently asked questions</h2>
-
-    <div class="faq-list" data-i18n="uk">
-      <details name="faq-uk">
-        <summary>Скільки часу займає SEO до перших результатів?</summary>
-        <p>Перші технічні покращення помітні за кілька тижнів, відчутне зростання трафіку - зазвичай через 3–6 місяців, залежно від ніші та конкуренції.</p>
-      </details>
-      <details name="faq-uk">
-        <summary>Чи працюєте з малим бізнесом?</summary>
-        <p>Так, працюю як з малим бізнесом, так і з більшими e-commerce проєктами - підхід адаптується під масштаб і бюджет.</p>
-      </details>
-      <details name="faq-uk">
-        <summary>Чи можете працювати з сайтом не на WordPress?</summary>
-        <p>Так. Більшість технічних і SEO-робіт не залежать від CMS - головне доступ до коду чи адмінки.</p>
-      </details>
-      <details name="faq-uk">
-        <summary>Якою мовою спілкуємось?</summary>
-        <p>Українською, англійською або чеською - як вам зручніше.</p>
-      </details>
-      <details name="faq-uk">
-        <summary>Скільки коштують послуги?</summary>
-        <p>Вартість залежить від обсягу робіт і ринку. Напишіть кілька слів про проєкт - запропоную орієнтовний бюджет після короткого аудиту.</p>
-      </details>
-    </div>
-
-    <div class="faq-list" data-i18n="en">
-      <details name="faq-en">
-        <summary>How long until I see SEO results?</summary>
-        <p>Technical fixes show up within weeks; noticeable traffic growth usually takes 3–6 months, depending on niche and competition.</p>
-      </details>
-      <details name="faq-en">
-        <summary>Do you work with small businesses?</summary>
-        <p>Yes - I work with both small businesses and larger e-commerce projects, adapting the approach to scale and budget.</p>
-      </details>
-      <details name="faq-en">
-        <summary>Can you work with a site that isn't on WordPress?</summary>
-        <p>Yes. Most technical and SEO work isn't CMS-dependent - what matters is access to the code or admin panel.</p>
-      </details>
-      <details name="faq-en">
-        <summary>What language do we communicate in?</summary>
-        <p>Ukrainian, English, or Czech - whichever works best for you.</p>
-      </details>
-      <details name="faq-en">
-        <summary>How much do your services cost?</summary>
-        <p>Cost depends on scope and market. Tell me a bit about your project - I'll suggest a ballpark after a short audit.</p>
-      </details>
-    </div>
-  </section>
-
-  <section class="wrap reveal" id="audit-cta">
-    <div class="cta-banner">
-      <div class="cta-banner-text-wrap">
-        <p class="cta-banner-title" data-i18n="uk">Хочете дізнатися, що не так із вашим сайтом?</p>
-        <p class="cta-banner-title" data-i18n="en">Want to know what's wrong with your site?</p>
-        <p class="cta-banner-text" data-i18n="uk">Напишіть на <button type="button" class="copy-email copy-email-inline" data-copy="yuliiakvitchasta@gmail.com">yuliiakvitchasta@gmail.com</button> <span class="copy-hint" data-i18n="uk">(натисніть, щоб скопіювати)</span> з темою «SEO аудит» - і отримаєте 3 конкретні кроки протягом 1–2 днів.</p>
-        <p class="cta-banner-text" data-i18n="en">Email <button type="button" class="copy-email copy-email-inline" data-copy="yuliiakvitchasta@gmail.com">yuliiakvitchasta@gmail.com</button> <span class="copy-hint" data-i18n="en">(click to copy)</span> with subject "SEO audit" - and get 3 concrete next steps within 1–2 days.</p>
+    <div class="process-item">
+      <span class="process-num">04</span>
+      <div class="process-content">
+        <h3 class="process-title">
+          <span data-lang="uk">Виконання</span>
+          <span data-lang="en">Execution</span>
+        </h3>
+        <p class="process-body">
+          <span data-lang="uk">Впроваджую зміни і звітую зрозумілою мовою.</span>
+          <span data-lang="en">I implement the changes and report results in plain language.</span>
+        </p>
       </div>
-      <a class="btn btn-primary" href="mailto:yuliiakvitchasta@gmail.com?subject=SEO%20%D0%B0%D1%83%D0%B4%D0%B8%D1%82" data-i18n="uk">Написати листа</a>
-      <a class="btn btn-primary" href="mailto:yuliiakvitchasta@gmail.com?subject=Free%20SEO%20audit" data-i18n="en">Send email</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="wrap reveal" id="contact">
-    <p class="eyebrow" data-i18n="uk">Контакти</p>
-    <p class="eyebrow" data-i18n="en">Contact</p>
-    <h2 data-i18n="uk">Зв'язатися</h2>
-    <h2 data-i18n="en">Get in touch</h2>
-    <p class="lead" data-i18n="uk">Розкажіть про свій бізнес - запропоную, з чого почати.</p>
-    <p class="lead" data-i18n="en">Tell me about your business - I'll suggest where to start.</p>
+<!-- STACK -->
+<section id="stack" class="section">
+  <div class="section-header">
+    <span class="section-num">05</span>
+    <h2 class="section-title">
+      <span data-lang="uk">З чим<br><em>працюю</em></span>
+      <span data-lang="en">Tools I<br><em>work with</em></span>
+    </h2>
+  </div>
+  <div class="stack-list">
+    <span class="stack-tag">Google Analytics 4</span>
+    <span class="stack-tag">Google Tag Manager</span>
+    <span class="stack-tag">Google Ads</span>
+    <span class="stack-tag">Meta Ads Manager</span>
+    <span class="stack-tag">Ahrefs</span>
+    <span class="stack-tag">WordPress / qTranslate</span>
+    <span class="stack-tag">Schema.org / JSON-LD</span>
+    <span class="stack-tag">Google Search Console</span>
+    <span class="stack-tag">HTML / CSS</span>
+  </div>
+  <div class="markets-row">
+    <span class="label" data-lang="uk">Ринки та мови</span>
+    <span class="label" data-lang="en">Markets & languages</span>
+    <div class="market-tags">
+      <span class="market-tag">🇺🇦 UA</span>
+      <span class="market-tag">🇬🇧 EN</span>
+      <span class="market-tag">🇨🇿 CZ</span>
+      <span class="market-tag">🇵🇱 PL</span>
+    </div>
+  </div>
+</section>
 
-    <ul class="contact-list">
-      <li>
-        <span>Email</span>
-        <span class="email-row">
-          <button type="button" class="copy-email" data-copy="yuliiakvitchasta@gmail.com">yuliiakvitchasta@gmail.com</button>
-          <span class="copy-hint" data-i18n="uk">(натисніть, щоб скопіювати)</span>
-          <span class="copy-hint" data-i18n="en">(click to copy)</span>
-        </span>
-      </li>
-      <li><span>Telegram</span><span><a href="https://t.me/yuliia_mwsproweb">@yuliia_mwsproweb</a></span></li>
-      <li><span>LinkedIn</span><span><a href="https://linkedin.com/in/yuliia-kvitchasta-%F0%9F%87%BA%F0%9F%87%A6-2b5b07103">linkedin.com/in/yuliia-kvitchasta</a></span></li>
-    </ul>
-  </section>
-</main>
 
-<footer class="wrap">
-  <span data-i18n="uk">© 2026 Юлія Квітчаста - SEO та digital-маркетинг для бізнесу в Україні та Європі.</span>
-  <span data-i18n="en">© 2026 Yuliia Kvitchasta - SEO &amp; digital marketing for businesses in Ukraine and Europe.</span>
+<!-- LOG -->
+<section id="log" class="section">
+  <div class="section-header">
+    <span class="section-num">06</span>
+    <h2 class="section-title">
+      <span data-lang="uk">Що вже<br><em>виправлено</em></span>
+      <span data-lang="en">Recently<br><em>fixed</em></span>
+    </h2>
+  </div>
+  <div class="log-list">
+    <div class="log-item">
+      <span class="log-check">✓</span>
+      <p class="log-text">
+        <span data-lang="uk">Відновлено GA4-трекінг покупок, заблокований Safari ITP / Apple Pay</span>
+        <span data-lang="en">GA4 purchase tracking restored after Safari ITP / Apple Pay blocked it</span>
+      </p>
+    </div>
+    <div class="log-item">
+      <span class="log-check">✓</span>
+      <p class="log-text">
+        <span data-lang="uk">Розблоковано конверсії Google Ads, які гасив consent-менеджер</span>
+        <span data-lang="en">Google Ads conversions unblocked from a consent-manager conflict</span>
+      </p>
+    </div>
+    <div class="log-item">
+      <span class="log-check">✓</span>
+      <p class="log-text">
+        <span data-lang="uk">Виправлено мовні помилки (відмінки, граматичний рід, кальки) на 4 мовних версіях</span>
+        <span data-lang="en">Corrected language errors (case forms, grammatical gender, calques) across 4 locales</span>
+      </p>
+    </div>
+    <div class="log-item">
+      <span class="log-check">✓</span>
+      <p class="log-text">
+        <span data-lang="uk">Розміщено органічні беклінки на профільних донор-сайтах без спам-патернів</span>
+        <span data-lang="en">Placed organic backlinks on relevant donor sites with no spam patterns</span>
+      </p>
+    </div>
+    <div class="log-item">
+      <span class="log-check">✓</span>
+      <p class="log-text">
+        <span data-lang="uk">Сформовано унікальне позиціонування бренду проти європейських преміум-конкурентів</span>
+        <span data-lang="en">Positioned the brand against premium EU competitors with a distinct narrative</span>
+      </p>
+    </div>
+    <div class="log-item">
+      <span class="log-check">✓</span>
+      <p class="log-text">
+        <span data-lang="uk">Автоматизовано конвертацію товарних фото (HEIC/DNG/JPG → WebP) для швидшого завантаження</span>
+        <span data-lang="en">Automated product photo conversion (HEIC/DNG/JPG → WebP) for faster page loads</span>
+      </p>
+    </div>
+    <div class="log-item">
+      <span class="log-check">✓</span>
+      <p class="log-text">
+        <span data-lang="uk">Розроблено рекламні креативи FB/Instagram (текст + SVG-банери) під етапи воронки</span>
+        <span data-lang="en">Created Facebook/Instagram ad creatives (copy + SVG banners) mapped to funnel stages</span>
+      </p>
+    </div>
+    <div class="log-item">
+      <span class="log-check">✓</span>
+      <p class="log-text">
+        <span data-lang="uk">Побудовано контент-пайплайн: статті спершу українською, потім локалізація на 4+ мов</span>
+        <span data-lang="en">Built a content pipeline: articles written in Ukrainian first, then localized into 4+ languages</span>
+      </p>
+    </div>
+    <div class="log-item">
+      <span class="log-check">✓</span>
+      <p class="log-text">
+        <span data-lang="uk">Впроваджено FAQ/HowTo/BreadcrumbList розмітку для блогу Expert Advice</span>
+        <span data-lang="en">Implemented FAQ/HowTo/BreadcrumbList schema across the Expert Advice content hub</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="section section-dark">
+  <div class="section-header">
+    <span class="section-num">07</span>
+    <h2 class="section-title">
+      <span data-lang="uk">Часті<br><em>запитання</em></span>
+      <span data-lang="en">Frequently<br><em>asked</em></span>
+    </h2>
+  </div>
+  <div class="faq-list">
+
+    <details class="faq-item">
+      <summary class="faq-q">
+        <span data-lang="uk">Скільки часу займає SEO до перших результатів?</span>
+        <span data-lang="en">How long until I see SEO results?</span>
+        <span class="faq-icon">+</span>
+      </summary>
+      <p class="faq-a">
+        <span data-lang="uk">Перші технічні покращення помітні за кілька тижнів, відчутне зростання трафіку — зазвичай через 3–6 місяців, залежно від ніші та конкуренції.</span>
+        <span data-lang="en">Technical fixes show up within weeks; noticeable traffic growth usually takes 3–6 months, depending on niche and competition.</span>
+      </p>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-q">
+        <span data-lang="uk">Чи працюєте з малим бізнесом?</span>
+        <span data-lang="en">Do you work with small businesses?</span>
+        <span class="faq-icon">+</span>
+      </summary>
+      <p class="faq-a">
+        <span data-lang="uk">Так, працюю як з малим бізнесом, так і з більшими e-commerce проєктами — підхід адаптується під масштаб і бюджет.</span>
+        <span data-lang="en">Yes — I work with both small businesses and larger e-commerce projects, adapting the approach to scale and budget.</span>
+      </p>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-q">
+        <span data-lang="uk">Чи можете працювати з сайтом не на WordPress?</span>
+        <span data-lang="en">Can you work with a site that isn't on WordPress?</span>
+        <span class="faq-icon">+</span>
+      </summary>
+      <p class="faq-a">
+        <span data-lang="uk">Так. Більшість технічних і SEO-робіт не залежать від CMS — головне доступ до коду чи адмінки.</span>
+        <span data-lang="en">Yes. Most technical and SEO work isn't CMS-dependent — what matters is access to the code or admin panel.</span>
+      </p>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-q">
+        <span data-lang="uk">Скільки коштують послуги?</span>
+        <span data-lang="en">How much do your services cost?</span>
+        <span class="faq-icon">+</span>
+      </summary>
+      <p class="faq-a">
+        <span data-lang="uk">Вартість залежить від обсягу робіт і ринку. Напишіть кілька слів про проєкт — запропоную орієнтовний бюджет після короткого аудиту.</span>
+        <span data-lang="en">Cost depends on scope and market. Tell me a bit about your project — I'll suggest a ballpark after a short audit.</span>
+      </p>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-q">
+        <span data-lang="uk">Якою мовою спілкуємось?</span>
+        <span data-lang="en">What language do we communicate in?</span>
+        <span class="faq-icon">+</span>
+      </summary>
+      <p class="faq-a">
+        <span data-lang="uk">Українською, англійською або чеською — як вам зручніше.</span>
+        <span data-lang="en">Ukrainian, English, or Czech — whichever works best for you.</span>
+      </p>
+    </details>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <div class="contact-inner">
+    <div class="contact-headline">
+      <h2 class="contact-title">
+        <span data-lang="uk">Хочете дізнатися,<br>що не так<br>із вашим сайтом?</span>
+        <span data-lang="en">Want to know<br>what's holding<br>your site back?</span>
+      </h2>
+      <p class="contact-sub">
+        <span data-lang="uk">Напишіть — і отримаєте 3 конкретні кроки протягом 1–2 днів.</span>
+        <span data-lang="en">Write to me — and get 3 concrete next steps within 1–2 days.</span>
+      </p>
+      <a href="mailto:yuliiakvitchasta@gmail.com?subject=SEO%20аудит" class="btn-primary" style="margin-top:32px;display:inline-block;">
+        <span data-lang="uk">Написати листа</span>
+        <span data-lang="en">Send email</span>
+      </a>
+    </div>
+    <div class="contact-links">
+      <div class="contact-link-group">
+        <span class="label">Email</span>
+        <a href="mailto:yuliiakvitchasta@gmail.com" class="contact-link">yuliiakvitchasta@gmail.com</a>
+      </div>
+      <div class="contact-link-group">
+        <span class="label">Telegram</span>
+        <a href="https://t.me/yuliia_mwsproweb" class="contact-link" target="_blank" rel="noopener">@yuliia_mwsproweb</a>
+      </div>
+      <div class="contact-link-group">
+        <span class="label">LinkedIn</span>
+        <a href="https://linkedin.com/in/yuliia-kvitchasta-%F0%9F%87%BA%F0%9F%87%A6-2b5b07103" class="contact-link" target="_blank" rel="noopener">yuliia-kvitchasta</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <span data-lang="uk">© 2026 Юлія Квітчаста — SEO та digital-маркетинг</span>
+  <span data-lang="en">© 2026 Yuliia Kvitchasta — SEO & digital marketing</span>
+  <a href="#top" class="footer-top">↑</a>
 </footer>
 
+
 <script>
-  const buttons = document.querySelectorAll('[data-set-lang]');
-  buttons.forEach(btn => {
+  // Language toggle
+  const body = document.body;
+  const langBtns = document.querySelectorAll('[data-lang-switch]');
+
+  langBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      const lang = btn.getAttribute('data-set-lang');
-      document.documentElement.lang = lang;
-      document.documentElement.setAttribute('data-lang', lang);
-      buttons.forEach(b => b.classList.toggle('is-active', b === btn));
+      const lang = btn.dataset.langSwitch;
+      body.classList.toggle('lang-en', lang === 'en');
+      langBtns.forEach(b => b.classList.toggle('active', b.dataset.langSwitch === lang));
+      document.documentElement.lang = lang === 'en' ? 'en' : 'uk';
     });
   });
 
-  document.querySelectorAll('.copy-email').forEach(btn => {
-    btn.addEventListener('click', async () => {
-      const text = btn.getAttribute('data-copy');
-      try {
-        await navigator.clipboard.writeText(text);
-      } catch (e) {
-        const tmp = document.createElement('textarea');
-        tmp.value = text;
-        document.body.appendChild(tmp);
-        tmp.select();
-        document.execCommand('copy');
-        document.body.removeChild(tmp);
+  // Sticky nav border on scroll
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // Email copy on click
+  document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+    link.addEventListener('click', e => {
+      if (e.metaKey || e.ctrlKey) return; // let cmd+click open mail
+      const email = link.getAttribute('href').replace('mailto:', '').split('?')[0];
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(email).catch(() => {});
       }
-      const hints = btn.parentElement.querySelectorAll('.copy-hint');
-      btn.classList.add('is-copied');
-      hints.forEach(h => {
-        h.dataset.original = h.dataset.original || h.textContent;
-        h.textContent = h.dataset.i18n === 'uk' ? '(скопійовано ✓)' : '(copied ✓)';
-      });
-      setTimeout(() => {
-        btn.classList.remove('is-copied');
-        hints.forEach(h => { h.textContent = h.dataset.original; });
-      }, 2000);
     });
   });
-
-  if ('IntersectionObserver' in window) {
-    const obs = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('is-visible'); });
-    }, { threshold: 0.15 });
-    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-  } else {
-    document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
-  }
 </script>
-
 </body>
 </html>
